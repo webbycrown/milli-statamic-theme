@@ -1,0 +1,17 @@
+{{# About description — heading + body text (about.html) #}}
+<section class="about-description">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="wrapper">
+					{{ if heading }}<h2 class="title-rg" data-aos="fade-up" data-aos-duration="1000">{{ heading }}</h2>{{ /if }}
+					{{ if body }}
+					<div class="desc-content">
+						{{ body | markdown }}
+					</div>
+					{{ /if }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

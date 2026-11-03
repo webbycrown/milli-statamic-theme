@@ -1,0 +1,38 @@
+{{# Home Hero Three — milli-3.html hero (similar to home_hero with different class) #}}
+<section class="hero-section milli-hero-3">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="wrapper">
+					<div class="hero-content">
+						{{ if heading }}<h2>{{ heading }}</h2>{{ /if }}
+						<div class="auto-column">
+							{{ if text }}<p>{{ text }}</p>{{ /if }}
+							{{ if button_label }}
+							<div class="hero-button">
+								<a href="{{ button_url }}" class="btn btn-primary">
+									<span>{{ button_label }}</span>
+								</a>
+							</div>
+							{{ /if }}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{ if circle_text }}
+	<div class="hero-circle-text">
+		<h2 id="circle-text">{{ circle_text }} </h2>
+	</div>
+	{{ /if }}
+	<div>
+		{{ if overlay_text }}<h1 class="black_text">{{ overlay_text }}</h1>{{ /if }}
+		{{ if hero_image }}
+		<div class="hero-background">
+			<div class="img"><img src="{{ partial:partials/media-url :file="hero_image" }}" alt="{{ heading }}" fetchpriority="high" decoding="async"></div>
+			{{ if overlay_text }}<h1 class="white_text">{{ overlay_text }}</h1>{{ /if }}
+		</div>
+		{{ /if }}
+	</div>
+</section>

@@ -1,0 +1,7 @@
+Urbanist (https://github.com/coreyhu/Urbanist)
+Mulish (https://github.com/googlefonts/mulish)
+
+These fonts are licensed under the SIL Open Font License, Version 1.1.
+https://scripts.sil.org/OFL
+
+This kit does not grant a license to resell the font files separately from the starter kit.

@@ -1,0 +1,68 @@
+title: Workshop
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: star_image
+            field:
+              type: assets
+              display: Star image
+              container: assets
+              max_files: 1
+          -
+            handle: image
+            field:
+              type: assets
+              display: Detail image
+              container: assets
+              max_files: 1
+          -
+            handle: date
+            field:
+              type: date
+              display: Date
+          -
+            handle: excerpt
+            field:
+              type: textarea
+              display: Excerpt
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              automatic_line_breaks: true
+          -
+            handle: gallery
+            field:
+              type: grid
+              display: Gallery
+              fields:
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Image
+                    container: assets
+                    max_files: 1
+                -
+                  handle: alt
+                  field:
+                    type: text
+                    display: Alt text
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo

@@ -1,0 +1,82 @@
+title: Culture
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: image
+            field:
+              type: assets
+              display: Featured image
+              container: assets
+              max_files: 1
+          -
+            handle: date
+            field:
+              type: date
+              display: Date
+              required: true
+          -
+            handle: category
+            field:
+              type: text
+              display: Category
+          -
+            handle: subtitle
+            field:
+              type: text
+              display: Subtitle
+          -
+            handle: author
+            field:
+              type: text
+              display: Author
+          -
+            handle: excerpt
+            field:
+              type: textarea
+              display: Excerpt
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              automatic_line_breaks: true
+          -
+            handle: content_heading
+            field:
+              type: text
+              display: Mid heading
+          -
+            handle: detail_image
+            field:
+              type: assets
+              display: Detail image
+              container: assets
+              max_files: 1
+          -
+            handle: detail_text
+            field:
+              type: textarea
+              display: Detail text beside image
+          -
+            handle: content_closing
+            field:
+              type: markdown
+              display: Closing content
+              automatic_line_breaks: true
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo

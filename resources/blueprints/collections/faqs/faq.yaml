@@ -1,0 +1,19 @@
+title: FAQ
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Question
+          -
+            handle: body
+            field:
+              type: markdown
+              display: Answer
+              automatic_line_breaks: true

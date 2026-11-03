@@ -1,0 +1,18 @@
+{{# About intro — heading, text, large image (about.html) #}}
+<section class="about-intro">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="wrapper">
+					{{ if heading }}<h2 class="intro-title" data-aos="fade-up" data-aos-duration="1000">{{ heading }}</h2>{{ /if }}
+					{{ if text }}<p data-aos="fade-up" data-aos-duration="1000">{{ text }}</p>{{ /if }}
+				</div>
+				{{ if image }}
+				<div class="intro-img" data-aos="fade-up" data-aos-duration="1000">
+					<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ heading }}">
+				</div>
+				{{ /if }}
+			</div>
+		</div>
+	</div>
+</section>

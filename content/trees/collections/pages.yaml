@@ -1,0 +1,31 @@
+tree:
+  -
+    entry: home
+  -
+    entry: home-two
+  -
+    entry: home-three
+  -
+    entry: about
+  -
+    entry: news
+  -
+    entry: editions
+  -
+    entry: culture
+  -
+    entry: culture-grid
+  -
+    entry: latest-blog
+  -
+    entry: workshops
+  -
+    entry: career
+  -
+    entry: pricing
+  -
+    entry: faq
+  -
+    entry: contact
+  -
+    entry: all-pages

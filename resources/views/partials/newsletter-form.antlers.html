@@ -1,0 +1,14 @@
+{{ form:create handle="newsletter" class="letter-form js-theme-form" data-aos="fade-up" data-aos-duration="1000" }}
+	<div class="stay-connect-fields letter-form-fields">
+		<label for="newsletter-email-{{ id or 'main' }}" class="visually-hidden">Email</label>
+		<input type="email" class="form-control" id="newsletter-email-{{ id or 'main' }}" placeholder="{{ setting:newsletter_placeholder or 'Enter your email ...' }}" name="email" required>
+		<button type="submit" class="sign-up">
+			<span class="btn-label">{{ setting:newsletter_button or "Sign Up" }}</span>
+			<span class="btn-loading" hidden>…</span>
+		</button>
+	</div>
+	<div class="stay-connect-success form-success" hidden>
+		<p>{{ setting:newsletter_success or "Thank you for subscribing!" }}</p>
+	</div>
+	<div class="stay-connect-alert--error form-errors" hidden></div>
+{{ /form:create }}

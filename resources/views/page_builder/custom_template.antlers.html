@@ -1,0 +1,41 @@
+{{# Fully customize template block (all-layout custom-templ-page) #}}
+<section class="custom-templ-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="custom-templ-wrap">
+					<div class="custom-templ-content">
+						<div class="custom-templ-content-wrap">
+							{{ if heading }}<h3 data-aos="fade-right" data-aos-duration="1000">{{ heading }}</h3>{{ /if }}
+							{{ if text }}<p data-aos="fade-right" data-aos-duration="1500">{{ text }}</p>{{ /if }}
+						</div>
+						{{ if button_label }}
+						<div class="hero-button" data-aos="fade-right" data-aos-duration="1500">
+							<a href="{{ button_url or '#' }}" class="btn btn-primary">
+								<span>{{ button_label }}</span>
+							</a>
+						</div>
+						{{ /if }}
+					</div>
+					<div class="custom-templ-img">
+						{{ if image }}
+						<div class="custom-templ-img-item" data-aos="zoom-in" data-aos-duration="1000">
+							<img src="{{ partial:partials/media-url :file="image" }}" alt="">
+						</div>
+						{{ /if }}
+						{{ if image_two }}
+						<div class="custom-templ-img-item-2" data-aos="zoom-in" data-aos-duration="1000">
+							<img src="{{ partial:partials/media-url :file="image_two" }}" alt="">
+						</div>
+						{{ /if }}
+						{{ if image_three }}
+						<div class="custom-templ-img-item-3" data-aos="zoom-in" data-aos-duration="1000">
+							<img src="{{ partial:partials/media-url :file="image_three" }}" alt="">
+						</div>
+						{{ /if }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

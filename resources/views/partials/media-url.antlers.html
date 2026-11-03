@@ -1,0 +1,1 @@
+{{ if file }}{{ if file | contains:assets }}{{ file }}{{ else }}/assets/{{ file }}{{ /if }}?v=5{{ elseif fallback }}/assets/{{ fallback }}?v=5{{ /if }}

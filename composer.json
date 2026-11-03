@@ -1,0 +1,14 @@
+{
+    "name": "webbycrown/milli-statamic-theme",
+    "type": "statamic-starter-kit",
+    "description": "Culture magazine starter kit with news, editions, culture stories, workshops, and careers.",
+    "license": "proprietary",
+    "require": {
+        "statamic/cms": "^5.0"
+    },
+    "extra": {
+        "statamic": {
+            "starter-kit": true
+        }
+    }
+}

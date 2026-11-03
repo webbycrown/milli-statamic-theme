@@ -1,0 +1,52 @@
+{{# News detail — star image + article body (news-detail.html) #}}
+<section class="news-detail-intro">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="wrapper">
+					<div class="star-post">
+						{{ if star_image }}
+						<div class="post-img" data-aos="zoom-out" data-aos-duration="1000">
+							{{ partial:partials/star-image :file="star_image" :alt="title" :id="id" }}
+						</div>
+						{{ /if }}
+						<div class="post-content">
+							<p class="date-meta" data-aos="fade-up" data-aos-duration="1000">{{ date format="d M, Y" }}</p>
+							<h4 data-aos="fade-up" data-aos-duration="1000">{{ title }}</h4>
+						</div>
+					</div>
+					<div class="caption-box">
+						{{ if content }}
+						{{ content }}
+						{{ /if }}
+						{{ if content_heading }}
+						<h5 class="head-top" data-aos="fade-up" data-aos-duration="1000">{{ content_heading }}</h5>
+						{{ /if }}
+						{{ if quote }}
+						<div class="quote-box">
+							<div class="quote" aria-hidden="true"><img src="/assets/image/quote.svg" alt=""></div>
+							<div class="content">
+								<h4 data-aos="fade-up" data-aos-duration="1000">{{ quote }}</h4>
+								{{ if quote_author }}
+								<p class="name" data-aos="fade-up" data-aos-duration="1000"><span>-</span> {{ quote_author }}</p>
+								{{ /if }}
+							</div>
+						</div>
+						{{ /if }}
+						{{ if secondary_image }}
+						<div class="neranese-img" data-aos="zoom-in" data-aos-duration="1000">
+							<img src="{{ partial:partials/media-url :file="secondary_image" }}" alt="{{ title }}">
+						</div>
+						{{ /if }}
+						{{ if content_closing }}
+						{{ content_closing }}
+						{{ /if }}
+						{{ if closing_heading }}
+						<h5 class="head-bottom" data-aos="fade-up" data-aos-duration="1000">{{ closing_heading }}</h5>
+						{{ /if }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

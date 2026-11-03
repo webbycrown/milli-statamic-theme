@@ -1,0 +1,22 @@
+title: Setting
+data:
+  site_name: Milli
+  logo: image/logo.svg
+  logo_white: image/white-logo.svg
+  phone: '+01 987 6548 321'
+  email: millimagazine@gmail.com
+  address: '34 Red Barn Drive, Bradford, RI, 2808 United States'
+  social_links:
+    -
+      label: Facebook
+      url: '#'
+      icon: image/facebook.svg
+    -
+      label: Instagram
+      url: '#'
+      icon: image/instagram.svg
+    -
+      label: Twitter
+      url: '#'
+      icon: image/twitter.svg
+  map_embed: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79468.31970359007!2d-0.17511874274917635!3d51.506152542993966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604ce3941eb1f%3A0x1a5342fdf089c627!2sTrafalgar%20Square!5e0!3m2!1sen!2sin!4v1668599688081!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'

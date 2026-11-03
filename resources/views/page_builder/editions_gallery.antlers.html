@@ -1,0 +1,48 @@
+{{# Editions gallery — masonry-style grid (editions.html) #}}
+<section class="editions-gallery">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				{{ if heading or text }}
+				<div class="gallery-rows top-row">
+					<div class="item item-1">
+						{{ collection:editions limit="1" }}
+						{{ if image }}
+						<div class="img img-1" data-aos="fade-right" data-aos-duration="1000">
+							<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ title }}">
+						</div>
+						{{ /if }}
+						{{ /collection:editions }}
+					</div>
+					<div class="item item-2">
+						<div class="gallery-title">
+							{{ if heading }}<h2 class="intro-title" data-aos="fade-left" data-aos-duration="1000">{{ heading }}</h2>{{ /if }}
+							{{ if text }}<p data-aos="fade-left" data-aos-duration="1000">{{ text }}</p>{{ /if }}
+						</div>
+						{{ collection:editions offset="1" limit="1" }}
+						{{ if image }}
+						<div class="img img-2" data-aos="fade-left" data-aos-duration="1000">
+							<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ title }}">
+						</div>
+						{{ /if }}
+						{{ /collection:editions }}
+					</div>
+				</div>
+				{{ /if }}
+				{{ collection:editions offset="2" limit="4" }}
+				{{ if first or odd }}
+				<div class="gallery-rows">
+				{{ /if }}
+					{{ if image }}
+					<div class="img img-{{ count | add:2 }}" data-aos="{{ if odd }}fade-right{{ else }}fade-left{{ /if }}" data-aos-duration="1000">
+						<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ title }}">
+					</div>
+					{{ /if }}
+				{{ if last or even }}
+				</div>
+				{{ /if }}
+				{{ /collection:editions }}
+			</div>
+		</div>
+	</div>
+</section>

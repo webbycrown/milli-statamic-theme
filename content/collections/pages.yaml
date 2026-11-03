@@ -1,0 +1,7 @@
+title: Pages
+template: page
+layout: layout
+route: '{parent_uri}/{slug}'
+structure:
+  root: true
+  max_depth: 2

@@ -1,0 +1,6 @@
+title: News
+template: news/show
+layout: layout
+route: /news/{slug}
+date: true
+sort_dir: desc

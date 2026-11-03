@@ -1,0 +1,29 @@
+{{# About stories — images left, text right (about.html) #}}
+<section class="about-stories">
+	<div class="container position-relative">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="wrapper">
+					{{ if images }}
+					<div class="stories-rows">
+						{{ images limit="1" }}
+						<div class="img img-1" data-aos="zoom-in" data-aos-duration="1000"><img src="{{ partial:partials/media-url :file="image" }}" alt="{{ alt }}"></div>
+						{{ /images }}
+					</div>
+					<div class="stories-rows rows-2">
+						{{ images offset="1" limit="2" }}
+						<div class="img img-{{ count | add:1 }}" data-aos="zoom-in" data-aos-duration="1000"><img src="{{ partial:partials/media-url :file="image" }}" alt="{{ alt }}"></div>
+						{{ /images }}
+					</div>
+					{{ /if }}
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="content-box">
+					{{ if heading }}<h2 class="title-rg" data-aos="fade-up" data-aos-duration="1000">{{ heading }}</h2>{{ /if }}
+					{{ if body }}{{ body | markdown }}{{ /if }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

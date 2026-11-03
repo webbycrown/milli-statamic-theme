@@ -1,0 +1,37 @@
+{{# Pricing plans — cards grid (pricing-plan.html, milli-3.html) #}}
+<section class="pricing-page{{ if style == 'page' }} pricing-plan-main{{ /if }}">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="Pricing-title">
+					{{ if heading }}<h2 class="title-rg" data-aos="fade-up" data-aos-duration="1000">{{ heading }}</h2>{{ /if }}
+				</div>
+				<div class="pricing-plan">
+					{{ collection:plans }}
+					<div class="pricing-item" data-aos="fade-up" data-aos-duration="1000">
+						<div class="pricing-item-wrap">
+							<h4>{{ title }}</h4>
+							{{ if description }}<p>{{ description }}</p>{{ /if }}
+							<div class="pricing-price">
+								<span class="sign">{{ currency or "$" }}</span>
+								<span class="currency">{{ price }}</span>
+								<span class="month">{{ period or "month" }}</span>
+							</div>
+							{{ if features }}
+							{{ features }}
+							<p>{{ feature }}</p>
+							{{ /features }}
+							{{ /if }}
+							<div class="hero-button">
+								<a href="{{ button_url or '#' }}" class="btn btn-primary">
+									<span>{{ button_label or "Buy Now" }}</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					{{ /collection:plans }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

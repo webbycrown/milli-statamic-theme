@@ -1,0 +1,77 @@
+title: News
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: star_image
+            field:
+              type: assets
+              display: Star image
+              container: assets
+              max_files: 1
+          -
+            handle: date
+            field:
+              type: date
+              display: Date
+              required: true
+          -
+            handle: excerpt
+            field:
+              type: textarea
+              display: Excerpt
+          -
+            handle: content
+            field:
+              type: markdown
+              display: Content
+              automatic_line_breaks: true
+          -
+            handle: content_heading
+            field:
+              type: text
+              display: Mid heading
+          -
+            handle: quote
+            field:
+              type: textarea
+              display: Quote
+          -
+            handle: quote_author
+            field:
+              type: text
+              display: Quote author
+          -
+            handle: secondary_image
+            field:
+              type: assets
+              display: Secondary image
+              container: assets
+              max_files: 1
+          -
+            handle: content_closing
+            field:
+              type: markdown
+              display: Closing content
+              automatic_line_breaks: true
+          -
+            handle: closing_heading
+            field:
+              type: text
+              display: Closing heading
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo

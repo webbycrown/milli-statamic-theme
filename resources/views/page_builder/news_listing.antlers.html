@@ -1,0 +1,31 @@
+{{# News listing — star-shaped image cards (news.html) #}}
+<section class="news-articles">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="articles-title">
+					{{ if heading }}<h2 class="intro-title" data-aos="fade-down" data-aos-duration="1000">{{ heading }}</h2>{{ /if }}
+					{{ if text }}<p data-aos="fade-up" data-aos-duration="1000">{{ text }}</p>{{ /if }}
+				</div>
+				{{ collection:news paginate="6" as="articles" }}
+				<div class="articles-wrapper">
+					{{ articles }}
+					<div class="news-item">
+						{{ if star_image }}
+						<div class="news-img" data-aos="fade-right" data-aos-duration="1000">
+							{{ partial:partials/star-image :file="star_image" :alt="title" :id="id" }}
+						</div>
+						{{ /if }}
+						<div class="news-content" data-aos="fade-left" data-aos-duration="1000">
+							<p class="date-meta">{{ date format="d M, Y" }}</p>
+							<h4><a href="{{ url }}">{{ title }}</a></h4>
+						</div>
+					</div>
+					{{ /articles }}
+				</div>
+				{{ partial:partials/news-pagination }}
+				{{ /collection:news }}
+			</div>
+		</div>
+	</div>
+</section>

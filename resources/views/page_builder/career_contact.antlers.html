@@ -1,0 +1,59 @@
+{{# On-page career apply section (career.html career-contact-section) #}}
+<section class="career-contact-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="wrapper">
+					<div class="career-contact-intro">
+						<div class="auto-rows">
+							<div class="content">
+								<div class="contetn-top">
+									{{ if heading }}<h3 data-aos="fade-up" data-aos-duration="1000">{{ heading }}</h3>{{ /if }}
+									{{ if text }}<p data-aos="fade-up" data-aos-duration="1000">{{ text }}</p>{{ /if }}
+									{{ if text_two }}<p data-aos="fade-up" data-aos-duration="1000">{{ text_two }}</p>{{ /if }}
+								</div>
+								{{ if requirements_heading or requirements_text }}
+								<div class="contetn-bottom">
+									{{ if requirements_heading }}<h4 data-aos="fade-up" data-aos-duration="1000">{{ requirements_heading }}</h4>{{ /if }}
+									{{ if requirements_text }}<p data-aos="fade-up" data-aos-duration="1000">{{ requirements_text }}</p>{{ /if }}
+								</div>
+								{{ /if }}
+							</div>
+						</div>
+
+						{{ form:create handle="career" class="contact-form js-theme-form" }}
+							<div class="stay-connect-fields">
+								<div class="form-item" data-aos="fade-up" data-aos-duration="1000">
+									<label for="career-contact-name">Name</label>
+									<input type="text" class="form-control" id="career-contact-name" name="name" required autocomplete="name">
+								</div>
+								<div class="form-item" data-aos="fade-up" data-aos-duration="1000">
+									<label for="career-contact-email">Email</label>
+									<input type="email" class="form-control" id="career-contact-email" name="email" required autocomplete="email">
+								</div>
+								<div class="form-item" data-aos="fade-up" data-aos-duration="1000">
+									<label for="career-contact-phone">Phone</label>
+									<input type="tel" class="form-control" id="career-contact-phone" name="phone" autocomplete="tel">
+								</div>
+								<div class="form-item" data-aos="fade-up" data-aos-duration="1000">
+									<label for="career-contact-message">Let us know</label>
+									<textarea name="cover_letter" class="form-control" id="career-contact-message" rows="4"></textarea>
+								</div>
+								<div class="hero-button" data-aos="fade-right" data-aos-duration="1500">
+									<button type="submit" class="btn btn-primary">
+										<span class="btn-label">{{ setting:career_button or "Apply" }}</span>
+										<span class="btn-loading" hidden>…</span>
+									</button>
+								</div>
+							</div>
+							<div class="stay-connect-success form-success" hidden>
+								<p>{{ setting:career_success or "Thank you for your application!" }}</p>
+							</div>
+							<div class="stay-connect-alert--error form-errors" hidden></div>
+						{{ /form:create }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

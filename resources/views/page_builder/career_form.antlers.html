@@ -1,0 +1,61 @@
+{{# Career apply modal (career.html #test-form / career-popup-page) #}}
+<div id="career-form" class="career-popup-page mfp-hide">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h3>{{ heading or "Your Information" }}</h3>
+				{{ form:create handle="career" class="contact-form js-theme-form" }}
+					<div class="stay-connect-fields">
+						<div class="name-email">
+							<div class="form-item">
+								<label for="career-name">Name</label>
+								<input type="text" class="form-control" id="career-name" name="name" required autocomplete="name">
+							</div>
+							<div class="form-item">
+								<label for="career-email">Email</label>
+								<input type="email" class="form-control" id="career-email" name="email" required autocomplete="email">
+							</div>
+						</div>
+						<div class="name-email">
+							<div class="form-item">
+								<label for="career-phone">Phone number</label>
+								<input type="tel" class="form-control" id="career-phone" name="phone" autocomplete="tel">
+							</div>
+							<div class="form-item" aria-hidden="true"></div>
+						</div>
+						<div class="form-item">
+							<label for="career-message">Let us know</label>
+							<textarea name="cover_letter" class="form-control" id="career-message" rows="4"></textarea>
+						</div>
+						<div class="name-email name-email-wrapp">
+							<div class="form-item">
+								<label for="career-resume">Resume</label>
+								<div class="file-upload-wrap">
+									<input type="file" class="form-control" id="career-resume" name="resume" accept=".pdf,.doc,.docx" required>
+									<div class="svg-wrap" aria-hidden="true">
+										<svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.77851 12.1125C8.81602 12.2625 8.81602 12.4125 8.81602 12.5625C8.81602 13.3875 8.51602 14.1375 7.91602 14.7L6.71602 15.9C6.15352 16.4625 5.36602 16.8 4.57852 16.8C2.89102 16.8 1.54102 15.45 1.54102 13.7625C1.54102 12.9375 1.84102 12.1875 2.44102 11.625L3.64102 10.425C4.20352 9.86252 4.99102 9.52502 5.81602 9.52502C5.96602 9.52502 6.11602 9.56253 6.26602 9.56253L7.20352 8.62503C6.75352 8.47503 6.30352 8.40002 5.81602 8.40002C4.69102 8.40002 3.64102 8.85003 2.85352 9.63753L1.65352 10.8375C0.866015 11.625 0.416016 12.675 0.416016 13.8C0.416016 16.0875 2.29102 17.9625 4.57852 17.9625C5.70352 17.9625 6.75352 17.5125 7.54102 16.725L8.74102 15.525C9.52851 14.7375 9.97852 13.6875 9.97852 12.5625C9.97852 12.075 9.90352 11.625 9.75352 11.175L8.77851 12.1125Z" fill="#134563" />
+											<path d="M14.1793 0C13.0543 0 12.0043 0.449995 11.2168 1.2375L10.0168 2.4375C9.2293 3.225 8.7793 4.275 8.7793 5.4C8.7793 5.8875 8.8543 6.3375 9.0043 6.7875L9.9418 5.85C9.9043 5.7 9.9043 5.55 9.9043 5.4C9.9043 4.575 10.2043 3.825 10.8043 3.2625L12.0043 2.0625C12.5668 1.5 13.3543 1.1625 14.1793 1.1625C15.8668 1.1625 17.2168 2.5125 17.2168 4.2C17.2168 5.025 16.9168 5.775 16.3168 6.3375L15.1168 7.5375C14.5543 8.1 13.7668 8.4375 12.9793 8.4375C12.8293 8.4375 12.6793 8.4 12.5293 8.4L11.5918 9.3C12.0418 9.45 12.4918 9.525 12.9793 9.525C14.1043 9.525 15.1543 9.075 15.9418 8.2875L17.1418 7.0875C17.9293 6.3 18.3793 5.25 18.3793 4.125C18.3418 1.875 16.4668 0 14.1793 0Z" fill="#134563" />
+											<path d="M6.37812 12.5625C6.22812 12.5625 6.07812 12.4875 5.96562 12.375C5.74063 12.15 5.74063 11.775 5.96562 11.5125L11.9656 5.5125C12.1906 5.2875 12.5656 5.2875 12.8281 5.5125C13.0531 5.7375 13.0531 6.1125 12.8281 6.375L6.82812 12.375C6.67813 12.525 6.52812 12.5625 6.37812 12.5625Z" fill="#134563" />
+										</svg>
+									</div>
+									<span>Add Files</span>
+								</div>
+							</div>
+						</div>
+						<div class="hero-button">
+							<button type="submit" class="btn btn-primary">
+								<span class="btn-label">{{ setting:career_button or "Submit" }}</span>
+								<span class="btn-loading" hidden>…</span>
+							</button>
+						</div>
+					</div>
+					<div class="stay-connect-success form-success" hidden>
+						<p>{{ setting:career_success or "Thank you for your application!" }}</p>
+					</div>
+					<div class="stay-connect-alert--error form-errors" hidden></div>
+				{{ /form:create }}
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,40 @@
+{{# Cultural Stories — image grid + text (index.html, about.html) #}}
+<section class="stories-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5">
+				<div class="stories-content">
+					{{ if heading }}<h2 class="title-rg" data-aos="fade-up" data-aos-duration="1000">{{ heading }}</h2>{{ /if }}
+					{{ if text }}<p data-aos="fade-up" data-aos-duration="1000">{{ text }}</p>{{ /if }}
+					{{ if button_label }}
+					<div class="stories-button" data-aos="fade-up" data-aos-duration="1000">
+						<a href="{{ button_url }}" class="btn btn-primary">
+							<span>{{ button_label }}</span>
+						</a>
+					</div>
+					{{ /if }}
+				</div>
+			</div>
+			<div class="col-lg-7">
+				<div class="stories-wrapper">
+					{{ if images }}
+					<div class="stories-rows top-rows">
+						{{ images limit="2" }}
+						<div class="stories-img" data-aos="zoom-in" data-aos-duration="1000">
+							<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ alt }}">
+						</div>
+						{{ /images }}
+					</div>
+					<div class="stories-rows bottom-rows">
+						{{ images offset="2" }}
+						<div class="stories-img" data-aos="zoom-in" data-aos-duration="1000">
+							<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ alt }}">
+						</div>
+						{{ /images }}
+					</div>
+					{{ /if }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

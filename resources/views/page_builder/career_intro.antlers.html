@@ -1,0 +1,39 @@
+{{# Career intro — heading + text + image + about (career.html) #}}
+<section class="career-section">
+	<div class="container">
+		<div class="career-title">
+			{{ if heading }}<h2 class="title-rg" data-aos="fade-up" data-aos-duration="1000">{{ heading }}</h2>{{ /if }}
+			{{ if text }}<p data-aos="fade-up" data-aos-duration="1000">{{ text }}</p>{{ /if }}
+		</div>
+	</div>
+</section>
+{{ if image or about_heading }}
+<section class="about-career-section">
+	<div class="container">
+		<div class="row">
+			{{ if image }}
+			<div class="col-12 col-md-6 col-lg-6">
+				<div class="about-career-left">
+					<img data-aos="zoom-in" data-aos-duration="1000" src="{{ partial:partials/media-url :file="image" }}" alt="{{ about_heading }}">
+				</div>
+			</div>
+			{{ /if }}
+			<div class="col-12 col-md-6 col-lg-6">
+				<div class="about-career-right">
+					<div class="stories-content">
+						{{ if about_heading }}<h2 class="title-rg" data-aos="fade-up" data-aos-duration="1000">{{ about_heading }}</h2>{{ /if }}
+						{{ if about_text }}<p data-aos="fade-up" data-aos-duration="1000">{{ about_text }}</p>{{ /if }}
+						{{ if button_label }}
+						<div class="stories-button" data-aos="fade-up" data-aos-duration="1000">
+							<a href="{{ button_url }}" class="btn btn-primary">
+								<span>{{ button_label }}</span>
+							</a>
+						</div>
+						{{ /if }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{{ /if }}

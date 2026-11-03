@@ -1,0 +1,25 @@
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{{ partial:partials/seo-meta }}
+	<link rel="icon" href="/assets/image/favicon.png">
+	{{ partial:partials/theme-color }}
+	{{# Hide off-canvas menu until milli.css is applied — avoids FOUC without overriding theme layout #}}
+	<style id="milli-fouc-fix">
+		html:not(.milli-css-ready) .menu-bar,
+		html:not(.milli-css-ready) .search-bar{position:fixed;top:0;left:-120vw;width:100vw;height:100vh;overflow:hidden;opacity:0;pointer-events:none;visibility:hidden}
+		html:not(.milli-css-ready) [data-aos]{opacity:1;transform:none;transition:none}
+		.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+	</style>
+	<link rel="preload" href="/assets/fonts/ArsenicaTrial-Bold.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/assets/fonts/BeVietnamPro-Regular.woff2" as="font" type="font/woff2" crossorigin>
+	{{# One CSS request — nginx serves /assets/ so CSS is not blocked behind artisan #}}
+	<link rel="stylesheet" href="/assets/css/milli.css?v=1.15" id="milli-css" onload="this.onload=null;document.documentElement.classList.add('milli-css-ready')">
+	<script>
+		(function () {
+			var l = document.getElementById('milli-css');
+			if (l && l.sheet) document.documentElement.classList.add('milli-css-ready');
+		})();
+	</script>
+	<style id="aos-fouc-fix">[data-aos]{opacity:1!important;transform:none!important;transition:none!important}</style>
+</head>

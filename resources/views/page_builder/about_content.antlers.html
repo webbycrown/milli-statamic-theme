@@ -1,0 +1,21 @@
+{{# About content box — paragraphs + side image (about.html) #}}
+<div class="about-content-box">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-6">
+				<div class="content-box">
+					{{ if body }}{{ body | markdown }}{{ /if }}
+				</div>
+			</div>
+			<div class="col-lg-6">
+				{{ if image }}
+				<div class="img-city">
+					<div class="img-box" data-aos="zoom-in" data-aos-duration="1000">
+						<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ heading }}">
+					</div>
+				</div>
+				{{ /if }}
+			</div>
+		</div>
+	</div>
+</div>

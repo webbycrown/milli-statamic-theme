@@ -1,0 +1,58 @@
+{{# Culture detail — blog post with featured image (culture-detail.html) #}}
+<section class="culture-intro">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="wrapper">
+					<div class="culture-post">
+						<div class="meta" data-aos="fade-up" data-aos-duration="1000">
+							<p>{{ date format="d M, Y" }} {{ if category }}<a href="/culture">{{ category }}</a>{{ /if }}</p>
+						</div>
+						<h5 class="post-heading" data-aos="fade-up" data-aos-duration="1000">{{ title }}</h5>
+						{{ if image }}
+						<div class="post-img" data-aos="zoom-in" data-aos-duration="1000">
+							<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ title }}">
+						</div>
+						{{ /if }}
+						{{ if subtitle }}<h5 class="post-bottom" data-aos="fade-up" data-aos-duration="1000">{{ subtitle }}</h5>{{ /if }}
+						{{ if author }}<p class="written" data-aos="fade-up" data-aos-duration="1000">Written By: {{ author }}</p>{{ /if }}
+					</div>
+					<div class="caption-box">
+						{{ if content }}
+						{{ content }}
+						{{ /if }}
+						{{ if content_heading }}
+						<h5 class="content-head" data-aos="fade-up" data-aos-duration="1000">{{ content_heading }}</h5>
+						{{ /if }}
+						{{ if detail_image or detail_text }}
+						<div class="content-box">
+							{{ if detail_image }}
+							<div class="img-box" data-aos="zoom-in" data-aos-duration="1000">
+								<img src="{{ partial:partials/media-url :file="detail_image" }}" alt="{{ title }}">
+							</div>
+							{{ /if }}
+							{{ if detail_text }}
+							<div class="content">
+								{{ detail_text | nl2br }}
+							</div>
+							{{ /if }}
+						</div>
+						{{ /if }}
+						{{ if content_closing }}
+						{{ content_closing }}
+						{{ /if }}
+						<ul class="social-media" data-aos="fade-up" data-aos-duration="1000">
+							{{ setting:social_links }}
+							<li data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+								<a href="{{ url }}" target="_blank" rel="noopener">
+									{{ if icon }}<img src="{{ partial:partials/media-url :file="icon" }}" alt="{{ label }}" aria-hidden="true">{{ /if }}
+								</a>
+							</li>
+							{{ /setting:social_links }}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Milli banners — Statamic marketplace</title>
+  <style>
+    :root { --sage:#576F72; --soft:#E8E4D9; --muted:#b8b4b2; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Georgia, "Times New Roman", Times, serif; background: #141211; color: #fff; }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 40px 24px 80px; }
+    .top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: flex-end; margin-bottom: 28px; padding-bottom: 24px; border-bottom: 3px solid var(--sage); }
+    .brand { font-family: system-ui, sans-serif; font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--soft); margin: 0 0 8px; }
+    h1 { margin: 0; font-size: 36px; }
+    .lead { margin: 8px 0 0; color: var(--muted); font-family: system-ui, sans-serif; }
+    .price { background: var(--sage); color: #fff; padding: 16px 22px; min-width: 160px; text-align: right; font-family: system-ui, sans-serif; }
+    .price small { display: block; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; opacity: .85; }
+    .price strong { font-size: 32px; }
+    .domain, .repo { background: #1a2426; border: 1px solid #3a4e51; padding: 22px 24px; margin-bottom: 16px; }
+    .domain label, .repo label { display: block; font-family: system-ui, sans-serif; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--soft); margin-bottom: 8px; }
+    .domain a, .repo a { color: #fff; font-size: 24px; font-weight: 700; text-decoration: none; word-break: break-all; font-family: system-ui, sans-serif; }
+    .domain a:hover, .repo a:hover { color: var(--soft); }
+    .btn { display: inline-block; text-decoration: none; font-family: system-ui, sans-serif; font-weight: 600; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; padding: 12px 18px; border: 2px solid var(--sage); color: var(--soft); }
+    .btn.fill { background: var(--sage); color: #fff; border-color: var(--sage); }
+    .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+    .listing { background: #1f1c1b; border: 1px solid #333; padding: 20px; margin-bottom: 28px; font-family: system-ui, sans-serif; }
+    .listing h3 { margin: 0 0 6px; font-size: 18px; font-family: Georgia, serif; }
+    .listing .sub { margin: 0 0 16px; color: var(--muted); font-size: 13px; }
+    .fields { display: grid; gap: 12px; }
+    .field { display: grid; grid-template-columns: 180px 1fr; gap: 12px; align-items: start; padding-bottom: 12px; border-bottom: 1px solid #2a2726; }
+    @media (max-width: 700px) { .field { grid-template-columns: 1fr; } }
+    .lab { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); padding-top: 6px; }
+    .val { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .val code { background: #141211; padding: 6px 8px; font-size: 13px; word-break: break-all; }
+    .hint { width: 100%; color: var(--muted); font-size: 12px; }
+    .copy { cursor: pointer; background: transparent; color: var(--soft); border: 1px solid var(--sage); font: inherit; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; padding: 6px 10px; }
+    .cats { display: flex; flex-wrap: wrap; gap: 6px; }
+    .cat { border: 1px solid #444; padding: 4px 8px; font-size: 12px; }
+    .cat.primary { border-color: var(--sage); color: var(--soft); }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 22px; }
+    @media (min-width: 800px) { .grid.subs { grid-template-columns: 1fr 1fr; } }
+    .card { background: #1f1c1b; border: 1px solid #333; }
+    .card.main { grid-column: 1 / -1; }
+    .card.thumb { max-width: 360px; }
+    .card img { display: block; width: 100%; height: auto; }
+    .meta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; font-family: system-ui, sans-serif; }
+    .meta h3 { margin: 0 0 4px; font-size: 17px; font-family: Georgia, serif; }
+    .meta p { margin: 0; color: var(--muted); font-size: 13px; }
+    .swatches { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+    .swatch { width: 22px; height: 22px; border: 1px solid rgba(255,255,255,.25); }
+    .note { margin-top: 36px; color: var(--muted); font-size: 13px; line-height: 1.6; font-family: system-ui, sans-serif; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <p class="brand">Milli · Statamic starter kit</p>
+        <h1>Banner details</h1>
+        <p class="lead">Culture magazine · ten catalogues · main banner is the home hero · GitHub included</p>
+        <div class="swatches">
+          <i class="swatch" style="background:#576F72" title="Original"></i>
+          <i class="swatch" style="background:#247A4D" title="Fashion"></i>
+          <i class="swatch" style="background:#1B4F72" title="Menswear"></i>
+          <i class="swatch" style="background:#9D174D" title="Womenswear"></i>
+          <i class="swatch" style="background:#EA580C" title="Kids"></i>
+          <i class="swatch" style="background:#DC2626" title="Streetwear"></i>
+          <i class="swatch" style="background:#B45309" title="Jewellery"></i>
+          <i class="swatch" style="background:#BE185D" title="Beauty"></i>
+          <i class="swatch" style="background:#0369A1" title="Accessories"></i>
+          <i class="swatch" style="background:#0F766E" title="Homeware"></i>
+        </div>
+        <div class="actions">
+          <a class="btn fill" href="/assets/images/marketplace/milli-banners.zip?v=1" download>Download all (ZIP)</a>
+          <a class="btn" href="https://milli-statamic.webbydemo.in/" target="_blank" rel="noopener">Open live demo</a>
+          <a class="btn" href="https://github.com/webbycrown/milli-statamic-theme" target="_blank" rel="noopener">GitHub repo</a>
+        </div>
+      </div>
+      <div class="price"><small>Theme price</small><strong>$99</strong><small>per site</small></div>
+    </div>
+
+    <div class="domain">
+      <label>Live domain</label>
+      <a href="https://milli-statamic.webbydemo.in/">https://milli-statamic.webbydemo.in/</a>
+    </div>
+
+    <div class="repo">
+      <label>GitHub repository</label>
+      <a href="https://github.com/webbycrown/milli-statamic-theme">https://github.com/webbycrown/milli-statamic-theme</a>
+    </div>
+
+    <div class="listing">
+      <h3>Statamic Marketplace listing</h3>
+      <p class="sub">Fill these on the product form. First category is primary. Screenshots must be 1200 × 800. Thumbnail must be square, at least 600 × 600. Do not paste double curly braces into Summary or Main content.</p>
+      <p style="margin:0 0 16px"><button type="button" class="copy" data-copy="Name: Milli
+Slug: milli-culture-magazine
+Marketplace URL: https://statamic.com/starter-kits/webbycrown/milli-culture-magazine
+Categories: Blog, Small Business (first is primary)
+License: Paid
+Price: 99
+Summary: Culture and lifestyle magazine starter kit for Statamic 5 — news, editions, culture blogs, workshops, careers, FAQ, and AJAX forms, with an original demo plus nine niche catalogue colours. Statamic Pro is required to keep all three forms.
+Main content: Use README.md
+Documentation: Part of the Main Content
+Thumbnail: 00-milli-thumb.jpg (600x600)
+Screenshots: 1200x800 (see gallery)
+GitHub Repo: webbycrown/milli-statamic-theme
+Composer Package: webbycrown/milli-statamic-theme
+Live Preview URL: https://milli-statamic.webbydemo.in/
+Demo/Promo Video URL: 
+Official support: Yes
+Support URL: https://github.com/webbycrown/milli-statamic-theme/issues
+Minimum Git Version: 1.0.0
+End of Life: 
+Maintained State: Actively Maintained
+Abandon: No
+Who is using / first user: We are the first users. WebbyCrown builds and maintains Milli for our own Statamic magazine demos and for culture / lifestyle publishers who need a multi-catalogue magazine theme. Problem it solves: one Statamic culture-magazine design that demos an original pack plus nine niche colours with news, editions, culture blogs, workshops, careers, and AJAX forms.">Copy all fields</button></p>
+      <div class="fields">
+        <div class="field"><div class="lab">Name</div><div class="val"><code>Milli</code><button type="button" class="copy" data-copy="Milli">Copy</button></div></div>
+        <div class="field"><div class="lab">Slug</div><div class="val"><code>milli-culture-magazine</code><button type="button" class="copy" data-copy="milli-culture-magazine">Copy</button><div class="hint">Used to create the marketplace URL.</div></div></div>
+        <div class="field"><div class="lab">Marketplace URL</div><div class="val"><code>https://statamic.com/starter-kits/webbycrown/milli-culture-magazine</code><button type="button" class="copy" data-copy="https://statamic.com/starter-kits/webbycrown/milli-culture-magazine">Copy</button></div></div>
+        <div class="field"><div class="lab">Categories</div><div class="val"><div class="cats"><span class="cat primary">Blog · primary</span><span class="cat">Small Business</span></div><div class="hint">The first category is primary.</div></div></div>
+        <div class="field"><div class="lab">License</div><div class="val"><code>Paid</code><button type="button" class="copy" data-copy="Paid">Copy</button></div></div>
+        <div class="field"><div class="lab">Price</div><div class="val"><code>99</code><button type="button" class="copy" data-copy="99">Copy</button><div class="hint">USD per site.</div></div></div>
+        <div class="field"><div class="lab">Summary</div><div class="val"><code>Culture and lifestyle magazine starter kit for Statamic 5 — news, editions, culture blogs, workshops, careers, FAQ, and AJAX forms, with an original demo plus nine niche catalogue colours. Statamic Pro is required to keep all three forms.</code><button type="button" class="copy" data-copy="Culture and lifestyle magazine starter kit for Statamic 5 — news, editions, culture blogs, workshops, careers, FAQ, and AJAX forms, with an original demo plus nine niche catalogue colours. Statamic Pro is required to keep all three forms.">Copy</button></div></div>
+        <div class="field"><div class="lab">Main content</div><div class="val"><code>Use README.md</code><button type="button" class="copy" data-copy="Use README.md">Copy</button></div></div>
+        <div class="field"><div class="lab">Documentation</div><div class="val"><code>Part of the Main Content</code><button type="button" class="copy" data-copy="Part of the Main Content">Copy</button></div></div>
+        <div class="field"><div class="lab">Thumbnail</div><div class="val"><code>00-milli-thumb.jpg (600x600)</code><button type="button" class="copy" data-copy="00-milli-thumb.jpg">Copy</button><div class="hint">Square, at least 600 × 600.</div></div></div>
+        <div class="field"><div class="lab">Screenshots</div><div class="val"><code>1200x800 (see gallery)</code><button type="button" class="copy" data-copy="1200x800">Copy</button></div></div>
+        <div class="field"><div class="lab">GitHub Repo</div><div class="val"><code>webbycrown/milli-statamic-theme</code><button type="button" class="copy" data-copy="webbycrown/milli-statamic-theme">Copy</button></div></div>
+        <div class="field"><div class="lab">Composer Package</div><div class="val"><code>webbycrown/milli-statamic-theme</code><button type="button" class="copy" data-copy="webbycrown/milli-statamic-theme">Copy</button></div></div>
+        <div class="field"><div class="lab">Live Preview URL</div><div class="val"><code>https://milli-statamic.webbydemo.in/</code><button type="button" class="copy" data-copy="https://milli-statamic.webbydemo.in/">Copy</button></div></div>
+        <div class="field"><div class="lab">Demo/Promo Video URL</div><div class="val"><code>—</code><button type="button" class="copy" data-copy="">Copy</button><div class="hint">Leave empty unless you have a video.</div></div></div>
+        <div class="field"><div class="lab">Official support</div><div class="val"><code>Yes</code><button type="button" class="copy" data-copy="Yes">Copy</button></div></div>
+        <div class="field"><div class="lab">Support URL</div><div class="val"><code>https://github.com/webbycrown/milli-statamic-theme/issues</code><button type="button" class="copy" data-copy="https://github.com/webbycrown/milli-statamic-theme/issues">Copy</button></div></div>
+        <div class="field"><div class="lab">Minimum Git Version</div><div class="val"><code>1.0.0</code><button type="button" class="copy" data-copy="1.0.0">Copy</button><div class="hint">Tag when you cut the marketplace release.</div></div></div>
+        <div class="field"><div class="lab">End of Life</div><div class="val"><code>—</code><button type="button" class="copy" data-copy="">Copy</button></div></div>
+        <div class="field"><div class="lab">Maintained State</div><div class="val"><code>Actively Maintained</code><button type="button" class="copy" data-copy="Actively Maintained">Copy</button></div></div>
+        <div class="field"><div class="lab">Abandon</div><div class="val"><code>No</code><button type="button" class="copy" data-copy="No">Copy</button></div></div>
+        <div class="field"><div class="lab">Who is using / first user</div><div class="val"><code>WebbyCrown is the first user. Culture-magazine demos with ten catalogues and AJAX forms.</code><button type="button" class="copy" data-copy="We are the first users. WebbyCrown builds and maintains Milli for our own Statamic magazine demos and for culture / lifestyle publishers who need a multi-catalogue magazine theme. Problem it solves: one Statamic culture-magazine design that demos an original pack plus nine niche colours with news, editions, culture blogs, workshops, careers, and AJAX forms.">Copy</button><div class="hint">Private marketplace field. Stays private to you and the review team.</div></div></div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <article class="card main">
+        <img src="/assets/images/marketplace/01-milli-main.jpg?v=1" alt="Milli main banner">
+        <div class="meta"><div><h3>Main banner</h3><p>1600 × 900 · Home hero</p></div><a class="btn" href="/assets/images/marketplace/01-milli-main.jpg?v=1" download>Download</a></div>
+      </article>
+      <article class="card thumb">
+        <img src="/assets/images/marketplace/00-milli-thumb.jpg?v=1" alt="Milli thumbnail">
+        <div class="meta"><div><h3>Thumbnail</h3><p>600 × 600</p></div><a class="btn" href="/assets/images/marketplace/00-milli-thumb.jpg?v=1" download>Download</a></div>
+      </article>
+    </div>
+
+    <div class="grid subs" style="margin-top:28px">
+      <article class="card"><img src="/assets/images/marketplace/02-milli-home.jpg?v=1" alt="Home"><div class="meta"><div><h3>Home</h3><p>1200 × 800</p></div><a class="btn" href="/assets/images/marketplace/02-milli-home.jpg?v=1" download>Download</a></div></article>
+      <article class="card"><img src="/assets/images/marketplace/03-milli-editions.jpg?v=1" alt="Editions"><div class="meta"><div><h3>Editions</h3><p>1200 × 800</p></div><a class="btn" href="/assets/images/marketplace/03-milli-editions.jpg?v=1" download>Download</a></div></article>
+      <article class="card"><img src="/assets/images/marketplace/04-milli-news.jpg?v=1" alt="News"><div class="meta"><div><h3>News</h3><p>1200 × 800</p></div><a class="btn" href="/assets/images/marketplace/04-milli-news.jpg?v=1" download>Download</a></div></article>
+      <article class="card"><img src="/assets/images/marketplace/05-milli-culture.jpg?v=1" alt="Culture"><div class="meta"><div><h3>Culture</h3><p>1200 × 800</p></div><a class="btn" href="/assets/images/marketplace/05-milli-culture.jpg?v=1" download>Download</a></div></article>
+      <article class="card"><img src="/assets/images/marketplace/06-milli-about.jpg?v=1" alt="About"><div class="meta"><div><h3>About</h3><p>1200 × 800</p></div><a class="btn" href="/assets/images/marketplace/06-milli-about.jpg?v=1" download>Download</a></div></article>
+      <article class="card"><img src="/assets/images/marketplace/07-milli-stories.jpg?v=1" alt="Stories"><div class="meta"><div><h3>Stories</h3><p>1200 × 800</p></div><a class="btn" href="/assets/images/marketplace/07-milli-stories.jpg?v=1" download>Download</a></div></article>
+      <article class="card"><img src="/assets/images/marketplace/08-milli-catalogues.jpg?v=1" alt="Catalogues"><div class="meta"><div><h3>Catalogues hub</h3><p>1200 × 800</p></div><a class="btn" href="/assets/images/marketplace/08-milli-catalogues.jpg?v=1" download>Download</a></div></article>
+      <article class="card"><img src="/assets/images/marketplace/09-milli-github.jpg?v=1" alt="GitHub"><div class="meta"><div><h3>GitHub repo</h3><p>1200 × 800</p></div><a class="btn" href="/assets/images/marketplace/09-milli-github.jpg?v=1" download>Download</a></div></article>
+    </div>
+
+    <p class="note">Main banner is the classic Milli hero. Use that file first on the Statamic listing, then the 1200×800 set. Domain: milli-statamic.webbydemo.in. Repo: github.com/webbycrown/milli-statamic-theme. Theme price is $99 per site. Main content on the product form should stay Use README.md. Marketplace banner files are not part of the starter-kit export.</p>
+  </div>
+  <script>
+    function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) {
+        return navigator.clipboard.writeText(text);
+      }
+      return new Promise(function (resolve, reject) {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.setAttribute("readonly", "");
+        ta.style.cssText = "position:fixed;top:0;left:0;width:2em;height:2em;opacity:0";
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        var ok = false;
+        try { ok = document.execCommand("copy"); } catch (e) {}
+        document.body.removeChild(ta);
+        ok ? resolve() : reject(new Error("copy failed"));
+      });
+    }
+    document.addEventListener("click", function (e) {
+      var btn = e.target.closest(".copy");
+      if (!btn) return;
+      e.preventDefault();
+      var text = btn.getAttribute("data-copy") || "";
+      var old = btn.textContent;
+      copyText(text).then(function () {
+        btn.textContent = "Copied";
+        setTimeout(function () { btn.textContent = old; }, 1400);
+      }).catch(function () {
+        btn.textContent = "Failed";
+        setTimeout(function () { btn.textContent = old; }, 1600);
+      });
+    });
+  </script>
+</body>
+</html>

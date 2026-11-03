@@ -1,0 +1,38 @@
+title: Career Application
+fields:
+  -
+    handle: name
+    field:
+      type: text
+      display: Name
+      validate:
+        - required
+  -
+    handle: email
+    field:
+      type: text
+      display: Email
+      input_type: email
+      validate:
+        - required
+        - email
+  -
+    handle: phone
+    field:
+      type: text
+      display: Phone
+  -
+    handle: cover_letter
+    field:
+      type: textarea
+      display: Cover letter
+  -
+    handle: resume
+    field:
+      type: assets
+      display: Resume
+      container: resumes
+      max_files: 1
+      validate:
+        - 'mimes:pdf,doc,docx'
+        - 'max:5120'

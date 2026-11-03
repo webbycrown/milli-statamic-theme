@@ -1,0 +1,30 @@
+{{# Culture blog grid — 3-column cards (culture-grid.html) #}}
+<section class="culture-grid-section">
+	<div class="container">
+		<div class="culture-title">
+			{{ if heading }}<h2 class="title-rg" data-aos="fade-up" data-aos-duration="1000">{{ heading }}</h2>{{ /if }}
+		</div>
+		{{ collection:culture paginate="9" as="posts" }}
+		<div class="culture-grid-wrap">
+			<div class="culture-grid-group">
+				{{ posts }}
+				<div class="culture-grid-item" data-aos="{{ if count == 1 or count == 4 or count == 7 }}fade-left{{ elseif count == 2 or count == 5 or count == 8 }}fade-up{{ else }}fade-right{{ /if }}" data-aos-duration="1000">
+					{{ if image }}
+					<a href="{{ url }}" class="image">
+						<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ title }}">
+					</a>
+					{{ /if }}
+					<div class="meta">
+						<p class="date">{{ date format="d M, Y" }} - No Comments</p>
+					</div>
+					<div class="content">
+						<h4><a href="{{ url }}">{{ title }}</a></h4>
+					</div>
+				</div>
+				{{ /posts }}
+			</div>
+		</div>
+		{{ partial:partials/pagination }}
+		{{ /collection:culture }}
+	</div>
+</section>

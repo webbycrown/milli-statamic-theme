@@ -1,0 +1,28 @@
+{{# Career positions listing (career.html) #}}
+<section class="career-price-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="career-explore-title">
+					{{ if heading }}<h2 class="title-rg" data-aos="fade-up" data-aos-duration="1000">{{ heading }}</h2>{{ /if }}
+				</div>
+				<div class="career-plan">
+					{{ collection:careers }}
+					<div class="career-item" data-aos="zoom-in" data-aos-duration="1000">
+						<div class="career-item-wrap">
+							{{ if type }}<p>{{ type }}</p>{{ /if }}
+							<h5>{{ title }}</h5>
+							{{ if excerpt }}<p>{{ excerpt }}</p>{{ /if }}
+							<div class="hero-button" data-aos="fade-right" data-aos-duration="1500">
+								<a href="#career-form" class="btn btn-primary popup-with-form">
+									<span>Apply</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					{{ /collection:careers }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

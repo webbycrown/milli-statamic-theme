@@ -1,0 +1,8 @@
+title: Newsletter
+honeypot: winnie
+email:
+  -
+    to: '{{ setting:email }}'
+    from: '{{ email }}'
+    subject: 'New newsletter subscriber'
+    html: emails/newsletter

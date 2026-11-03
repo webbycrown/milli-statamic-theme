@@ -1,0 +1,11 @@
+{{# Per-catalogue brand colour — remaps Milli’s default sage (#576F72) and cream (#E8E4D9). #}}
+{{ theme_primary = setting:theme_color ?? '#576F72' }}
+{{ theme_soft = setting:theme_color_soft ?? '#E8E4D9' }}
+{{ theme_dark = setting:theme_color_dark ?? theme_primary }}
+<style id="milli-theme-color">
+:root {
+  --milli-primary: {{ theme_primary }};
+  --milli-soft: {{ theme_soft }};
+  --milli-dark: {{ theme_dark }};
+}
+</style>

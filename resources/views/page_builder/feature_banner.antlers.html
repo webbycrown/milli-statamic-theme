@@ -1,0 +1,64 @@
+{{# Image + copy banner (amazing-blog-page / purchase-milli-template) #}}
+{{ if layout == "cta" }}
+<section class="purchase-milli-template">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="purchase-milli-wrap">
+					<div class="purchase-milli-img">
+						{{ if image }}
+						<div class="purchase-milli-img-item" data-aos="zoom-in" data-aos-duration="1000">
+							<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ heading }}">
+						</div>
+						{{ /if }}
+					</div>
+					<div class="purchase-milli-content">
+						<div class="amazing-content-wrap">
+							{{ if heading }}<h3 data-aos="fade-left" data-aos-duration="1500">{{ heading }}</h3>{{ /if }}
+							{{ if text }}<p data-aos="fade-left" data-aos-duration="1500">{{ text }}</p>{{ /if }}
+						</div>
+						{{ if button_label }}
+						<div class="hero-button" data-aos="fade-right" data-aos-duration="1500">
+							<a href="{{ button_url or '#' }}" class="btn btn-2 btn-primary">
+								<span>{{ button_label }}</span>
+							</a>
+						</div>
+						{{ /if }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{{ else }}
+<section class="amazing-blog-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="amazing-blog-wrap">
+					<div class="amazing-blog-img">
+						{{ if image }}
+						<div class="amazing-blog-img-item" data-aos="zoom-in" data-aos-duration="1000">
+							<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ heading }}">
+						</div>
+						{{ /if }}
+					</div>
+					<div class="amazing-blog-content">
+						<div class="amazing-content-wrap" data-aos="zoom-out" data-aos-duration="1000">
+							{{ if heading }}<h3>{{ heading }}</h3>{{ /if }}
+							{{ if text }}<p>{{ text }}</p>{{ /if }}
+						</div>
+						{{ if button_label }}
+						<div class="hero-button" data-aos="fade-right" data-aos-duration="1500">
+							<a href="{{ button_url or '#' }}" class="btn btn-primary">
+								<span>{{ button_label }}</span>
+							</a>
+						</div>
+						{{ /if }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{{ /if }}

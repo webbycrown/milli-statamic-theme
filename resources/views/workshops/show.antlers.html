@@ -1,0 +1,48 @@
+{{# Workshop detail (workshop-detail.html) #}}
+<section class="workshop-detail-page">
+	<div class="container">
+		<div class="row">
+			<div class="row-12">
+				<div class="workshop-detail-wrap">
+					<div class="workshop-title">
+						<h3 class="title-rg" data-aos="fade-up" data-aos-duration="1000">{{ title }}</h3>
+					</div>
+					<div class="workshop-detail-home-page">
+						<div class="workshop-home-wrap">
+							{{ if image }}
+							<div class="workshop-home-img" data-aos="zoom-in" data-aos-duration="1000">
+								<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ title }}">
+							</div>
+							{{ /if }}
+							{{ if content }}
+							<div class="workshop-home-contant" data-aos="fade-up" data-aos-duration="1000">
+								{{ content }}
+							</div>
+							{{ /if }}
+							{{ if gallery }}
+							<div class="workshop-detail-grid-img">
+								<div class="workshop-img-grid-item">
+									{{ gallery }}
+									<div data-aos="zoom-in" data-aos-duration="1000" class="workshop-img-item-{{ count }}">
+										<img class="workshop-img-item-wrap" src="{{ partial:partials/media-url :file="image" }}" alt="{{ alt }}">
+									</div>
+									{{ /gallery }}
+								</div>
+							</div>
+							{{ /if }}
+							<ul class="social-media">
+								{{ setting:social_links }}
+								<li data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+									<a href="{{ url }}" target="_blank" rel="noopener">
+										{{ if icon }}<img src="{{ partial:partials/media-url :file="icon" }}" alt="{{ label }}" aria-hidden="true">{{ /if }}
+									</a>
+								</li>
+								{{ /setting:social_links }}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

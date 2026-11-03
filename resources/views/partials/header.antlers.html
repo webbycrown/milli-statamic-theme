@@ -1,0 +1,69 @@
+{{ setting_logo = setting:logo }}
+{{ setting_logo_white = setting:logo_white }}
+<header id="header"{{ if header_class }} class="{{ header_class }}"{{ /if }}>
+	<div class="menu-bar{{ if header_class == 'header-two' }} menu-bar-pase-2{{ /if }}">
+		<div class="menu-close">
+			<a href="javascript:;">
+				<img src="{{ partial:partials/media-url file="image/menu-close.svg" }}" alt="" aria-hidden="true">Close
+			</a>
+		</div>
+		<div class="menu-content{{ if header_class == 'header-two' }} menu-content-pase-2{{ /if }}">
+			<div class="nav-logo">
+				<a href="/">
+					{{ if setting_logo_white }}
+					<img src="{{ partial:partials/media-url :file="setting_logo_white" }}" alt="{{ setting:site_name }}">
+					{{ else }}
+					<img src="/assets/image/white-logo.svg" alt="{{ setting:site_name }}">
+					{{ /if }}
+				</a>
+			</div>
+			<ul class="main-menu">
+				{{ nav:header_menu }}
+				<li>
+					<a href="{{ url }}"{{ if is_current }} class="active"{{ /if }}>{{ title }}</a>
+				</li>
+				{{ /nav:header_menu }}
+			</ul>
+		</div>
+	</div>
+	<div class="search-bar">
+		<form action="/search" method="get">
+			<label for="header-search" class="visually-hidden">Search</label>
+			<input type="text" class="form-control" id="header-search" name="q" placeholder="Search here....">
+		</form>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="wrapper{{ if header_class == 'header-two' }} wrapper-pase-2{{ /if }}">
+					<div id="menu">
+						<span class="d-flex">
+							<img src="{{ partial:partials/media-url file="image/menu.svg" }}" alt="Open menu" aria-hidden="true">
+						</span>
+					</div>
+					<div id="logo">
+						<a href="/">
+							{{ if setting_logo }}
+							<img src="{{ partial:partials/media-url :file="setting_logo" }}" alt="{{ setting:site_name }}">
+							{{ else }}
+							<img src="/assets/image/logo.svg" alt="{{ setting:site_name }}">
+							{{ /if }}
+						</a>
+					</div>
+					<div id="search">
+						<span class="d-flex">
+							<div class="search-bugger">
+								{{ if header_class == 'header-two' }}
+								<img src="{{ partial:partials/media-url file="image/serch-black.svg" }}" class="img-1" alt="Search" aria-hidden="true">
+								{{ else }}
+								<img src="{{ partial:partials/media-url file="image/search.svg" }}" class="img-1" alt="Search" aria-hidden="true">
+								{{ /if }}
+								<img src="{{ partial:partials/media-url file="image/search-close.svg" }}" class="img-2" alt="Close search" aria-hidden="true">
+							</div>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

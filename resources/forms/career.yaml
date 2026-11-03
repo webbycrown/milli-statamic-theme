@@ -1,0 +1,9 @@
+title: Career Application
+honeypot: winnie
+email:
+  -
+    to: '{{ setting:email }}'
+    from: '{{ email }}'
+    reply_to: '{{ email }}'
+    subject: 'Career application from {{ name }}'
+    html: emails/career

@@ -1,0 +1,6 @@
+title: Workshops
+template: workshops/show
+layout: layout
+route: /workshops/{slug}
+date: true
+sort_dir: desc

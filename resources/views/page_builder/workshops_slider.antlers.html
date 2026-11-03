@@ -1,0 +1,37 @@
+{{# Workshops slider — star-shaped image + text (milli-2.html) #}}
+<section class="workshop-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="news-title">
+					{{ if heading }}<h2 class="title-rg" data-aos="fade-up" data-aos-duration="1000">{{ heading }}</h2>{{ /if }}
+				</div>
+				<div class="workshop-wrapper">
+					{{ collection:workshops limit="4" }}
+					<div class="workshop-item">
+						{{ if star_image }}
+						<div class="workshop-img-wrap" data-aos="fade-left" data-aos-duration="1000">
+							<div class="workshop-img">
+								<img src="{{ partial:partials/media-url :file="star_image" }}" alt="{{ title }}" class="star-shap-img">
+								<span class="workshop_star_bg">
+									<img src="/assets/image/star-bg.svg" alt="" aria-hidden="true">
+								</span>
+							</div>
+						</div>
+						{{ /if }}
+						<div class="workshop-item-wrap">
+							<h4 data-aos="fade-up" data-aos-duration="1000">{{ title }}</h4>
+							{{ if excerpt }}<p data-aos="fade-up" data-aos-duration="1000">{{ excerpt }}</p>{{ /if }}
+							<div class="hero-button" data-aos="fade-right" data-aos-duration="1500">
+								<a href="{{ url }}" class="btn btn-primary">
+									<span>Read more</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					{{ /collection:workshops }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

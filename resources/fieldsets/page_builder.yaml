@@ -1,0 +1,957 @@
+title: Page builder
+fields:
+  -
+    handle: page_builder
+    field:
+      type: replicator
+      display: Theme sections
+      instructions: One page template. Add any section to this page and drag to reorder.
+      button_label: Add section
+      collapse: accordion
+      sets:
+        heroes:
+          display: Heroes
+          sets:
+            home_hero:
+              display: Home hero
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                -
+                  handle: button_url
+                  field:
+                    type: link
+                    display: Button link
+                    collections:
+                      - pages
+                -
+                  handle: hero_image
+                  field:
+                    type: assets
+                    display: Hero image
+                    container: assets
+                    max_files: 1
+                -
+                  handle: overlay_text
+                  field:
+                    type: text
+                    display: Overlay text
+                -
+                  handle: circle_text
+                  field:
+                    type: text
+                    display: Circle text
+
+            home_hero_two:
+              display: Home hero (variant two)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                -
+                  handle: button_url
+                  field:
+                    type: link
+                    display: Button link
+                    collections:
+                      - pages
+                -
+                  handle: overlay_text
+                  field:
+                    type: text
+                    display: Overlay text
+                -
+                  handle: circle_text
+                  field:
+                    type: text
+                    display: Circle text
+
+            home_hero_three:
+              display: Home hero (variant three)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                -
+                  handle: button_url
+                  field:
+                    type: link
+                    display: Button link
+                    collections:
+                      - pages
+                -
+                  handle: hero_image
+                  field:
+                    type: assets
+                    display: Hero image
+                    container: assets
+                    max_files: 1
+                -
+                  handle: overlay_text
+                  field:
+                    type: text
+                    display: Overlay text
+                -
+                  handle: circle_text
+                  field:
+                    type: text
+                    display: Circle text
+
+        content:
+          display: Content
+          sets:
+            stories:
+              display: Cultural stories
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                -
+                  handle: button_url
+                  field:
+                    type: link
+                    display: Button link
+                    collections:
+                      - pages
+                -
+                  handle: images
+                  field:
+                    type: grid
+                    display: Story images
+                    fields:
+                      -
+                        handle: image
+                        field:
+                          type: assets
+                          display: Image
+                          container: assets
+                          max_files: 1
+                      -
+                        handle: alt
+                        field:
+                          type: text
+                          display: Alt text
+
+            about_intro:
+              display: About intro
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Image
+                    container: assets
+                    max_files: 1
+
+            about_content:
+              display: About content box
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: body
+                  field:
+                    type: markdown
+                    display: Body
+                    automatic_line_breaks: true
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Image
+                    container: assets
+                    max_files: 1
+
+            about_stories:
+              display: About stories
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: body
+                  field:
+                    type: markdown
+                    display: Body
+                    automatic_line_breaks: true
+                -
+                  handle: images
+                  field:
+                    type: grid
+                    display: Images
+                    fields:
+                      -
+                        handle: image
+                        field:
+                          type: assets
+                          display: Image
+                          container: assets
+                          max_files: 1
+                      -
+                        handle: alt
+                        field:
+                          type: text
+                          display: Alt text
+
+            about_description:
+              display: About description
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: body
+                  field:
+                    type: markdown
+                    display: Body
+                    automatic_line_breaks: true
+
+            artist:
+              display: Artist / magazine feature
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Image
+                    container: assets
+                    max_files: 1
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                -
+                  handle: button_url
+                  field:
+                    type: link
+                    display: Button link
+                    collections:
+                      - pages
+                -
+                  handle: heading_two
+                  field:
+                    type: text
+                    display: Heading (row two)
+                -
+                  handle: text_two
+                  field:
+                    type: textarea
+                    display: Text (row two)
+                -
+                  handle: image_two
+                  field:
+                    type: assets
+                    display: Image (row two)
+                    container: assets
+                    max_files: 1
+                -
+                  handle: button_label_two
+                  field:
+                    type: text
+                    display: Button label (row two)
+                -
+                  handle: button_url_two
+                  field:
+                    type: link
+                    display: Button link (row two)
+                    collections:
+                      - pages
+
+            magazine_feature:
+              display: Magazine feature
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Image
+                    container: assets
+                    max_files: 1
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                -
+                  handle: button_url
+                  field:
+                    type: link
+                    display: Button link
+                    collections:
+                      - pages
+
+            marquee:
+              display: Marquee text
+              fields:
+                -
+                  handle: marquee_text
+                  field:
+                    type: text
+                    display: Marquee text
+                -
+                  handle: show_culture_swiper
+                  field:
+                    type: toggle
+                    display: Show culture image swiper
+                    default: true
+
+            career_intro:
+              display: Career intro
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Image
+                    container: assets
+                    max_files: 1
+                -
+                  handle: about_heading
+                  field:
+                    type: text
+                    display: About heading
+                -
+                  handle: about_text
+                  field:
+                    type: textarea
+                    display: About text
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                -
+                  handle: button_url
+                  field:
+                    type: link
+                    display: Button link
+                    collections:
+                      - pages
+
+        listings:
+          display: Listings
+          sets:
+            news_slider:
+              display: News slider
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+
+            news_listing:
+              display: News listing
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+
+            editions_slider:
+              display: Editions slider
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+
+            editions_gallery:
+              display: Editions gallery
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+
+            editions_grid:
+              display: Editions grid
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                -
+                  handle: button_url
+                  field:
+                    type: link
+                    display: Button link
+                    collections:
+                      - pages
+
+            culture_slider:
+              display: Culture / blog slider
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: style
+                  field:
+                    type: select
+                    display: Layout
+                    default: default
+                    options:
+                      default: Default
+                      two: Variant two
+
+            culture_listing:
+              display: Culture blog listing
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+
+            culture_grid:
+              display: Culture blog grid
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+
+            latest_blog:
+              display: Latest blog grid
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+
+            blog_slider:
+              display: Blog slider (large)
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+
+            workshops_slider:
+              display: Workshops slider
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+
+            workshops_listing:
+              display: Workshops listing
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+
+            careers:
+              display: Open positions
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+
+            hiring_process:
+              display: Hiring process
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: steps
+                  field:
+                    type: replicator
+                    display: Steps
+                    button_label: Add step
+                    sets:
+                      step:
+                        display: Step
+                        fields:
+                          -
+                            handle: title
+                            field:
+                              type: text
+                              display: Title
+
+            pricing:
+              display: Pricing plans
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: style
+                  field:
+                    type: select
+                    display: Layout
+                    default: default
+                    options:
+                      default: Default
+                      page: Full page
+
+            faqs:
+              display: FAQ
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+
+        contact:
+          display: Contact
+          sets:
+            newsletter:
+              display: Newsletter
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+
+            contact_form:
+              display: Contact form
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+
+            career_contact:
+              display: Career contact section
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Intro text
+                -
+                  handle: text_two
+                  field:
+                    type: textarea
+                    display: Intro text (second paragraph)
+                -
+                  handle: requirements_heading
+                  field:
+                    type: text
+                    display: Requirements heading
+                -
+                  handle: requirements_text
+                  field:
+                    type: textarea
+                    display: Requirements text
+
+
+            career_form:
+              display: Career apply popup
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+
+            map:
+              display: Map
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+
+        indexes:
+          display: Indexes
+          sets:
+            all_pages:
+              display: All pages hero
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                    default: All pages
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Hero button label
+                -
+                  handle: button_url
+                  field:
+                    type: link
+                    display: Hero button link
+                    collections:
+                      - pages
+
+            unique_homes:
+              display: Unique home pages
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: homes
+                  field:
+                    type: replicator
+                    display: Homes
+                    button_label: Add home
+                    sets:
+                      home:
+                        display: Home
+                        fields:
+                          -
+                            handle: title
+                            field:
+                              type: text
+                              display: Title
+                          -
+                            handle: image
+                            field:
+                              type: assets
+                              display: Image
+                              container: assets
+                              max_files: 1
+                          -
+                            handle: link
+                            field:
+                              type: link
+                              display: Link
+                              collections:
+                                - pages
+
+            pages_showcase:
+              display: Inner pages showcase
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: pages
+                  field:
+                    type: replicator
+                    display: Pages
+                    button_label: Add page
+                    sets:
+                      page:
+                        display: Page
+                        fields:
+                          -
+                            handle: title
+                            field:
+                              type: text
+                              display: Title
+                          -
+                            handle: image
+                            field:
+                              type: assets
+                              display: Image
+                              container: assets
+                              max_files: 1
+                          -
+                            handle: link
+                            field:
+                              type: link
+                              display: Link
+                              collections:
+                                - pages
+
+            feature_banner:
+              display: Feature banner
+              fields:
+                -
+                  handle: layout
+                  field:
+                    type: select
+                    display: Layout
+                    options:
+                      blog: Amazing blog
+                      cta: Call to action
+                    default: blog
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Image
+                    container: assets
+                    max_files: 1
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                -
+                  handle: button_url
+                  field:
+                    type: link
+                    display: Button link
+                    collections:
+                      - pages
+
+            site_features:
+              display: Site features
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: features
+                  field:
+                    type: replicator
+                    display: Features
+                    button_label: Add feature
+                    sets:
+                      feature:
+                        display: Feature
+                        fields:
+                          -
+                            handle: title
+                            field:
+                              type: text
+                              display: Title
+                          -
+                            handle: icon
+                            field:
+                              type: assets
+                              display: Icon
+                              container: assets
+                              max_files: 1
+
+            custom_template:
+              display: Custom template
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: text
+                  field:
+                    type: textarea
+                    display: Text
+                -
+                  handle: image
+                  field:
+                    type: assets
+                    display: Image
+                    container: assets
+                    max_files: 1
+                -
+                  handle: image_two
+                  field:
+                    type: assets
+                    display: Image two
+                    container: assets
+                    max_files: 1
+                -
+                  handle: image_three
+                  field:
+                    type: assets
+                    display: Image three
+                    container: assets
+                    max_files: 1
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: Button label
+                -
+                  handle: button_url
+                  field:
+                    type: link
+                    display: Button link
+                    collections:
+                      - pages
+
+            pages_index:
+              display: Pages link index
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading

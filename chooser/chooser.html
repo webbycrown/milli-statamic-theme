@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Milli — ten magazine catalogues</title>
+  <link rel="icon" href="/original/assets/image/favicon.png">
+  <style>
+    @font-face {
+      font-family: "Arsenica";
+      src: url("/original/assets/fonts/ArsenicaTrial-Bold.woff2") format("woff2");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Be Vietnam Pro";
+      src: url("/original/assets/fonts/BeVietnamPro-Regular.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      background: #f7f5f0;
+      color: #1f1f1f;
+      font-family: "Be Vietnam Pro", "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 2px solid #247A4D; outline-offset: 3px; }
+    .bar {
+      background: #1f1f1f;
+      color: #fff;
+      font-size: 13px;
+      line-height: 1.4;
+      padding: 10px 16px;
+      text-align: center;
+    }
+    .wrap { width: min(1200px, calc(100% - 32px)); margin: 0 auto; }
+    .intro { padding: 48px 0 28px; max-width: 720px; }
+    h1 {
+      margin: 0;
+      font-family: "Arsenica", Georgia, serif;
+      font-size: clamp(40px, 6vw, 64px);
+      line-height: 1.12;
+      font-weight: 700;
+    }
+    .lede { margin: 16px 0 0; font-size: 18px; line-height: 28px; color: #575757; }
+    .facts {
+      display: flex; flex-wrap: wrap; gap: 8px 22px;
+      margin: 22px 0 0; padding: 0; list-style: none;
+      font-size: 15px; line-height: 24px; color: #1f1f1f;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      padding-bottom: 70px;
+    }
+    a.card {
+      display: flex; flex-direction: column;
+      background: #fff; border-radius: 24px; overflow: hidden;
+      box-shadow: 0 1px 0 rgba(0,0,0,.04);
+      color: #1f1f1f;
+    }
+    .photo { aspect-ratio: 16 / 10; overflow: hidden; background: var(--wash); }
+    .photo img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform 0.5s ease;
+    }
+    a.card:hover img { transform: scale(1.06); }
+    .body { padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; }
+    .kind {
+      display: flex; align-items: center; gap: 8px;
+      margin: 0; font-size: 13px; line-height: 20px; color: #666;
+      text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    .dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--accent); display: inline-block;
+    }
+    h2 {
+      margin: 10px 0 0;
+      font-family: "Arsenica", Georgia, serif;
+      font-size: 28px; line-height: 1.2; font-weight: 700;
+    }
+    .body .lede { margin: 10px 0 0; font-size: 15px; line-height: 24px; flex: 1; }
+    .go {
+      margin-top: 18px; display: inline-flex; align-items: center;
+      font-size: 14px; font-weight: 600; color: var(--accent);
+    }
+    .note { padding-bottom: 48px; font-size: 14px; color: #666; }
+    @media (max-width: 960px) { .grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="bar">One Milli design · original demo + nine niche colours · culture magazine demos</div>
+  <div class="wrap">
+    <div class="intro">
+      <h1>One Milli theme. Ten catalogues.</h1>
+      <p class="lede">Same magazine layout, news, culture blogs, editions, and workshops. Start with the original Milli demo, or open a niche catalogue for a different brand colour, logo, and photos.</p>
+      <ul class="facts">
+        <li>Original Milli demo</li>
+        <li>News &amp; culture</li>
+        <li>Editions &amp; workshops</li>
+        <li>Per-catalogue brand colour</li>
+      </ul>
+    </div>
+    <div class="grid">
+    <a class="card" href="/original/" style="--wash:#E8E4D9;--accent:#576F72">
+      <div class="photo"><img src="/original/assets/image/original-hero.jpg?v=2" alt="Original Milli catalogue"></div>
+      <div class="body">
+        <p class="kind"><span class="dot" aria-hidden="true"></span>Classic sage</p>
+        <h2>Milli / Original</h2>
+        <p class="lede">The original culture-magazine demo — classic accent, logo, and photos.</p>
+        <span class="go">Open catalogue</span>
+      </div>
+    </a>
+    <a class="card" href="/fashion/" style="--wash:#EBF4F1;--accent:#247A4D">
+      <div class="photo"><img src="/fashion/assets/image/fashion-hero.jpg?v=2" alt="Fashion catalogue"></div>
+      <div class="body">
+        <p class="kind"><span class="dot" aria-hidden="true"></span>Green culture notes</p>
+        <h2>Fashion</h2>
+        <p class="lede">Clothes, runway notes, and people who wear them.</p>
+        <span class="go">Open catalogue</span>
+      </div>
+    </a>
+    <a class="card" href="/menswear/" style="--wash:#E8F1F8;--accent:#1B4F72">
+      <div class="photo"><img src="/menswear/assets/image/menswear-hero.jpg?v=2" alt="Menswear catalogue"></div>
+      <div class="body">
+        <p class="kind"><span class="dot" aria-hidden="true"></span>Cut clean</p>
+        <h2>Menswear</h2>
+        <p class="lede">Shirts, coats, and desk-side stories.</p>
+        <span class="go">Open catalogue</span>
+      </div>
+    </a>
+    <a class="card" href="/womenswear/" style="--wash:#FCE8F0;--accent:#9D174D">
+      <div class="photo"><img src="/womenswear/assets/image/womenswear-hero.jpg?v=2" alt="Womenswear catalogue"></div>
+      <div class="body">
+        <p class="kind"><span class="dot" aria-hidden="true"></span>Soft focus</p>
+        <h2>Womenswear</h2>
+        <p class="lede">Dresses, knits, and evening pieces.</p>
+        <span class="go">Open catalogue</span>
+      </div>
+    </a>
+    <a class="card" href="/kids/" style="--wash:#FFF1E6;--accent:#EA580C">
+      <div class="photo"><img src="/kids/assets/image/kids-hero.jpg?v=2" alt="Kids catalogue"></div>
+      <div class="body">
+        <p class="kind"><span class="dot" aria-hidden="true"></span>Bright and light</p>
+        <h2>Kids</h2>
+        <p class="lede">Play clothes and weekend colour.</p>
+        <span class="go">Open catalogue</span>
+      </div>
+    </a>
+    <a class="card" href="/streetwear/" style="--wash:#FEE2E2;--accent:#DC2626">
+      <div class="photo"><img src="/streetwear/assets/image/streetwear-hero.jpg?v=2" alt="Streetwear catalogue"></div>
+      <div class="body">
+        <p class="kind"><span class="dot" aria-hidden="true"></span>Drops and desk notes</p>
+        <h2>Streetwear</h2>
+        <p class="lede">Graphics, cargos, late-night fittings.</p>
+        <span class="go">Open catalogue</span>
+      </div>
+    </a>
+    <a class="card" href="/jewellery/" style="--wash:#FEF3C7;--accent:#B45309">
+      <div class="photo"><img src="/jewellery/assets/image/jewellery-hero.jpg?v=2" alt="Jewellery catalogue"></div>
+      <div class="body">
+        <p class="kind"><span class="dot" aria-hidden="true"></span>Close to the skin</p>
+        <h2>Jewellery</h2>
+        <p class="lede">Chains, rings, workshop light.</p>
+        <span class="go">Open catalogue</span>
+      </div>
+    </a>
+    <a class="card" href="/beauty/" style="--wash:#FCE7F3;--accent:#BE185D">
+      <div class="photo"><img src="/beauty/assets/image/beauty-hero.jpg?v=2" alt="Beauty catalogue"></div>
+      <div class="body">
+        <p class="kind"><span class="dot" aria-hidden="true"></span>Colour, close up</p>
+        <h2>Beauty</h2>
+        <p class="lede">Cream, colour, dressing-table notes.</p>
+        <span class="go">Open catalogue</span>
+      </div>
+    </a>
+    <a class="card" href="/accessories/" style="--wash:#E0F2FE;--accent:#0369A1">
+      <div class="photo"><img src="/accessories/assets/image/accessories-hero.jpg?v=2" alt="Accessories catalogue"></div>
+      <div class="body">
+        <p class="kind"><span class="dot" aria-hidden="true"></span>Finish the page</p>
+        <h2>Accessories</h2>
+        <p class="lede">Bags, belts, small carry pieces.</p>
+        <span class="go">Open catalogue</span>
+      </div>
+    </a>
+    <a class="card" href="/homeware/" style="--wash:#CCFBF1;--accent:#0F766E">
+      <div class="photo"><img src="/homeware/assets/image/homeware-hero.jpg?v=2" alt="Homeware catalogue"></div>
+      <div class="body">
+        <p class="kind"><span class="dot" aria-hidden="true"></span>Table and room</p>
+        <h2>Homeware</h2>
+        <p class="lede">Bowls, linen, quiet interiors.</p>
+        <span class="go">Open catalogue</span>
+      </div>
+    </a>
+    </div>
+    <p class="note">Demo content only. Each catalogue is the same Milli theme with its own brand colour and labels.</p>
+  </div>
+</body>
+</html>

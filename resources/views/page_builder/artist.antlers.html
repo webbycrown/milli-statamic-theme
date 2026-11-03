@@ -1,0 +1,47 @@
+{{# Artist / Magazine feature — image + text alternating rows (milli-2.html) #}}
+<section class="artist-section">
+	<div class="artist-item artist-item-top">
+		<div class="container">
+			<div class="artist-megazin">
+				{{ if image }}
+				<div class="img img-1"><img src="{{ partial:partials/media-url :file="image" }}" alt="{{ heading }}"></div>
+				{{ /if }}
+				<div class="artist-content">
+					<div class="artist-content-wrap">
+						{{ if heading }}<h3 data-aos="fade-left" data-aos-duration="1000">{{ heading }}</h3>{{ /if }}
+						{{ if text }}<p data-aos="fade-left" data-aos-duration="1000">{{ text }}</p>{{ /if }}
+						{{ if button_label }}
+						<div class="hero-button" data-aos="fade-right" data-aos-duration="1500">
+							<a href="{{ button_url }}" class="btn btn-primary">
+								<span>{{ button_label }}</span>
+							</a>
+						</div>
+						{{ /if }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{ if image_two }}
+	<div class="artist-item artist-item-bottom">
+		<div class="container">
+			<div class="artist-megazin">
+				<div class="img img-1"><img src="{{ partial:partials/media-url :file="image_two" }}" alt="{{ heading_two }}"></div>
+				<div class="artist-content">
+					<div class="artist-content-wrap">
+						{{ if heading_two }}<h3 data-aos="fade-left" data-aos-duration="1000">{{ heading_two }}</h3>{{ /if }}
+						{{ if text_two }}<p data-aos="fade-left" data-aos-duration="1000">{{ text_two }}</p>{{ /if }}
+						{{ if button_label_two }}
+						<div class="hero-button" data-aos="fade-right" data-aos-duration="1500">
+							<a href="{{ button_url_two }}" class="btn btn-primary">
+								<span>{{ button_label_two }}</span>
+							</a>
+						</div>
+						{{ /if }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{ /if }}
+</section>

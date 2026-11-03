@@ -1,0 +1,27 @@
+{{# Star-clipped image — unique SVG clip ids per item (news.html / index.html) #}}
+{{ if file }}
+{{ sid = id or count or "1" }}
+{{ if file | contains:assets }}
+{{ file_url = file }}
+{{ else }}
+{{ file_url = "/assets/{file}" }}
+{{ /if }}
+<svg version="1.1" id="Layer_{{ sid }}" class="star-shap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve" role="img" aria-label="{{ alt }}">
+	<title>{{ alt }}</title>
+	<g>
+		<defs>
+			<path id="SVGID_{{ sid }}_" d="M359.4,89.5c58.3-109.2,214.8-109.2,273.2,0l3.2,6c27.8,52,82.7,83.7,141.7,81.8l6.8-0.2
+			c123.7-4.1,202,131.5,136.6,236.6l-3.6,5.8c-31.2,50.1-31.2,113.5,0,163.6l3.6,5.8c65.4,105.1-12.9,240.6-136.6,236.6l-6.8-0.2
+			c-58.9-1.9-113.9,29.8-141.7,81.8l-3.2,6c-58.3,109.2-214.8,109.2-273.2,0l-3.2-6c-27.8-52-82.7-83.7-141.7-81.8l-6.8,0.2
+			C84,829.4,5.8,693.9,71.2,588.8l3.6-5.8c31.2-50.1,31.2-113.5,0-163.6l-3.6-5.8C5.8,308.5,84,173,207.7,177.1l6.8,0.2
+			c58.9,1.9,113.9-29.8,141.7-81.8L359.4,89.5z"/>
+		</defs>
+		<clipPath id="TEG-SVGID_{{ sid }}_">
+			<use xlink:href="#SVGID_{{ sid }}_" style="overflow:visible;"/>
+		</clipPath>
+		<g transform="matrix(1 0 0 1 0 0)" style="clip-path:url(#TEG-SVGID_{{ sid }}_);">
+			<image width="100%" height="100%" class="images-box" style="overflow:visible;" xlink:href="{{ file_url }}" href="{{ file_url }}" preserveAspectRatio="xMidYMid slice"></image>
+		</g>
+	</g>
+</svg>
+{{ /if }}

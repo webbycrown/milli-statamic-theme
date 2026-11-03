@@ -1,0 +1,16 @@
+tree:
+  -
+    entry: faq
+    title: FAQ
+  -
+    entry: pricing
+    title: Pricing
+  -
+    entry: workshops
+    title: Workshops
+  -
+    entry: career
+    title: Career
+  -
+    entry: contact
+    title: Contact

@@ -1,0 +1,19 @@
+tree:
+  -
+    entry: home
+    title: Home
+  -
+    entry: about
+    title: About
+  -
+    entry: news
+    title: News
+  -
+    entry: editions
+    title: Editions
+  -
+    entry: culture
+    title: Culture
+  -
+    entry: contact
+    title: Contact

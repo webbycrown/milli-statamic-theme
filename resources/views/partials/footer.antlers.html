@@ -1,0 +1,139 @@
+{{ setting_logo = setting:logo }}
+{{ footer_text = footer:footer_text }}
+{{ footer_copyright = footer:copyright_text }}
+<footer class="footer{{ if footer_class }} {{ footer_class }}{{ /if }}">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				{{ if footer_class == 'footer-pase-2' }}
+				<div class="wrapper">
+					<div class="logo-and-text" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+						<a href="/" class="foot-logo">
+							{{ if setting_logo }}
+							<img src="{{ partial:partials/media-url :file="setting_logo" }}" alt="{{ setting:site_name }}">
+							{{ else }}
+							<img src="/assets/image/logo.svg" alt="{{ setting:site_name }}">
+							{{ /if }}
+						</a>
+						{{ if footer_text }}<p>{{ footer_text }}</p>{{ /if }}
+					</div>
+					<div class="logo-link" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+						<h4>Links</h4>
+						<div class="logo-link-wrap">
+							{{ nav:footer_menu }}
+							<p><a href="{{ url }}">{{ title }}</a></p>
+							{{ /nav:footer_menu }}
+						</div>
+					</div>
+					<div class="logo-support" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+						<h4>Support</h4>
+						<div class="logo-support-wrap">
+							{{ nav:footer_support }}
+							<p><a href="{{ url }}">{{ title }}</a></p>
+							{{ /nav:footer_support }}
+						</div>
+					</div>
+					<div class="logo-Official-info" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+						<h4>Official Info</h4>
+						<div class="logo-info-wrap">
+							{{ if setting:address }}
+							<h6>Address: <p><a href="javascript:;">{{ setting:address }}</a></p></h6>
+							{{ /if }}
+							{{ if setting:phone }}
+							<h6>Phone: <p><a href="tel:{{ setting:phone }}">{{ setting:phone }}</a></p></h6>
+							{{ /if }}
+							{{ if setting:email }}
+							<h6>Email: <p><a href="mailto:{{ setting:email }}">{{ setting:email }}</a></p></h6>
+							{{ /if }}
+						</div>
+					</div>
+				</div>
+				<div class="copyright">
+					<p>{{ footer_copyright or "&copy; COPYRIGHT Milli. All rights reserved" }}</p>
+					<ul class="social-media">
+						{{ setting:social_links }}
+						<li data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+							<a href="{{ url }}" target="_blank" rel="noopener">
+								{{ if icon }}<img src="{{ partial:partials/media-url :file="icon" }}" alt="{{ label }}" aria-hidden="true">{{ /if }}
+							</a>
+						</li>
+						{{ /setting:social_links }}
+					</ul>
+				</div>
+				{{ elseif footer_class == 'footer-pase-3' }}
+				<div class="wrapper">
+					<div class="logo-and-text" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+						<a href="/" class="foot-logo">
+							{{ if setting_logo }}
+							<img src="{{ partial:partials/media-url :file="setting_logo" }}" alt="{{ setting:site_name }}">
+							{{ else }}
+							<img src="/assets/image/logo.svg" alt="{{ setting:site_name }}">
+							{{ /if }}
+						</a>
+						{{ if footer_text }}<p>{{ footer_text }}</p>{{ /if }}
+						<ul class="social-media">
+							{{ setting:social_links }}
+							<li data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+								<a href="{{ url }}" target="_blank" rel="noopener">
+									{{ if icon }}<img src="{{ partial:partials/media-url :file="icon" }}" alt="{{ label }}" aria-hidden="true">{{ /if }}
+								</a>
+							</li>
+							{{ /setting:social_links }}
+						</ul>
+					</div>
+					<div class="logo-support" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+						<h4>Support</h4>
+						<div class="logo-support-wrap">
+							{{ nav:footer_support }}
+							<p><a href="{{ url }}">{{ title }}</a></p>
+							{{ /nav:footer_support }}
+						</div>
+					</div>
+					<div class="logo-subscrib" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+						<div class="subscrib-head">
+							<a href="javascript:;"><img src="/assets/image/mail.svg" alt="" aria-hidden="true"></a>
+							<h4>Subscribe For Newsletter</h4>
+						</div>
+						<div class="subscrib-contant">
+							<p>Subscribe for latest updates</p>
+							{{ partial:partials/newsletter-form id="footer" }}
+						</div>
+					</div>
+				</div>
+				<div class="copyright">
+					<p>{{ footer_copyright or "&copy; COPYRIGHT Milli. All rights reserved" }}</p>
+				</div>
+				{{ else }}
+				<div class="wrapper">
+					<div class="logo-and-menu">
+						<a href="/" class="foot-logo">
+							{{ if setting_logo }}
+							<img src="{{ partial:partials/media-url :file="setting_logo" }}" alt="{{ setting:site_name }}">
+							{{ else }}
+							<img src="/assets/image/logo.svg" alt="{{ setting:site_name }}">
+							{{ /if }}
+						</a>
+						<ul>
+							{{ nav:footer_menu }}
+							<li><a href="{{ url }}"{{ if is_current }} class="active"{{ /if }}>{{ title }}</a></li>
+							{{ /nav:footer_menu }}
+						</ul>
+					</div>
+					<ul class="social-media">
+						{{ setting:social_links }}
+						<li data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+							<a href="{{ url }}" target="_blank" rel="noopener">
+								{{ if icon }}<img src="{{ partial:partials/media-url :file="icon" }}" alt="{{ label }}" aria-hidden="true">{{ /if }}
+							</a>
+						</li>
+						{{ /setting:social_links }}
+					</ul>
+				</div>
+				<div class="copyright">
+					<p>{{ footer_copyright or "&copy; COPYRIGHT Milli. All rights reserved" }}</p>
+				</div>
+				{{ /if }}
+			</div>
+		</div>
+	</div>
+</footer>

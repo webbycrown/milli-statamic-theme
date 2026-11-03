@@ -1,0 +1,44 @@
+{{# Culture / Latest Blogs slider (index.html, milli-2.html) #}}
+<section class="culture-section{{ if style == 'two' }} culture-section-pase-2{{ /if }}">
+	<div class="container">
+		<div class="culture-title">
+			{{ if heading }}<h2 class="title-rg" data-aos="fade-up" data-aos-duration="1000">{{ heading }}</h2>{{ /if }}
+		</div>
+		<div class="swiper culture-swiper">
+			<div class="swiper-wrapper">
+				{{ collection:culture limit="6" }}
+				<div class="swiper-slide">
+					<div class="culture-items" data-aos="fade-up" data-aos-duration="1000">
+						{{ if image }}
+						<a href="{{ url }}" class="image">
+							<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ title }}">
+						</a>
+						{{ /if }}
+						{{ if style != 'two' }}
+						<div class="content">
+							<div class="meta">
+								<p class="date">{{ date format="d M, Y" }}</p>
+								<div class="culture-button">
+									<a href="{{ url }}" class="btn btn-primary">
+										<span>{{ category or "Culture" }}</span>
+									</a>
+								</div>
+							</div>
+							<h4><a href="{{ url }}">{{ title }}</a></h4>
+						</div>
+						{{ else }}
+						<div class="meta">
+							<p class="date">{{ date format="d M, Y" }} - No Comments</p>
+						</div>
+						<div class="content">
+							<h4><a href="{{ url }}">{{ title }}</a></h4>
+						</div>
+						{{ /if }}
+					</div>
+				</div>
+				{{ /collection:culture }}
+			</div>
+		</div>
+	</div>
+	<div class="cursor"><img src="/assets/image/Drag.png" alt="Drag" aria-hidden="true"></div>
+</section>

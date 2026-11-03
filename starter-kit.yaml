@@ -1,0 +1,18 @@
+title: Milli Culture Magazine Theme
+user: webbycrown
+repo: webbycrown/milli-statamic-theme
+export_paths:
+  - content
+  - app/Providers/MilliServiceProvider.php
+  - app/Support/MilliIndustry.php
+  - app/Console/Commands/SetupIndustryCommand.php
+  - app/Http/Middleware/PrefixAbsolutePaths.php
+  - storage/app/resumes
+  - resources/blueprints
+  - resources/fieldsets
+  - resources/forms
+  - resources/views
+  - public/assets
+  - chooser
+  - README.md
+  - THIRD_PARTY.md

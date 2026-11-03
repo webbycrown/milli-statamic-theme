@@ -1,0 +1,24 @@
+title: Career
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: type
+            field:
+              type: text
+              display: Job type
+              instructions: 'e.g. Full Time - Office, Part Time - Remote'
+          -
+            handle: excerpt
+            field:
+              type: textarea
+              display: Short description

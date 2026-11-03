@@ -1,0 +1,42 @@
+{{# Inner pages swiper (all-layout-presantation.html edition-section inner-pages) #}}
+<section class="edition-section inner-pages">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="edition-title">
+					{{ if heading }}<h2 class="title-rg mb-0" data-aos="fade-up" data-aos-duration="1000">{{ heading }}</h2>{{ /if }}
+				</div>
+				{{ if pages }}
+				<div class="edition-wrapper">
+					<div class="swiper edition-swiper inner-pages-swiper">
+						<div class="swiper-wrapper">
+							{{ pages }}
+							<div class="swiper-slide">
+								<div class="edition-item">
+									<a href="{{ link or '#' }}">
+										{{ if image }}
+										<div class="img {{ if count == 1 or count == 3 or count == 5 or count == 7 }}img-1{{ else }}img-3{{ /if }}">
+											<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ title }}">
+										</div>
+										{{ /if }}
+										{{ if title }}<h4>{{ title }}</h4>{{ /if }}
+									</a>
+								</div>
+							</div>
+							{{ /pages }}
+						</div>
+						<div class="edition-swiper-geers">
+							<div class="swiper-button-prev">
+								<img src="/assets/image/edition-swiper-arrow.png" alt="">
+							</div>
+							<div class="swiper-button-next">
+								<img src="/assets/image/edition-swiper-arrow.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				{{ /if }}
+			</div>
+		</div>
+	</div>
+</section>

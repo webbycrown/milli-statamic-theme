@@ -1,0 +1,50 @@
+title: Pages
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: body_class
+            field:
+              type: text
+              display: Body CSS class
+          -
+            handle: header_class
+            field:
+              type: select
+              display: Header style
+              options:
+                '': Default
+                header-two: Header two
+                header-three: Header three
+                faq-header: FAQ header
+              default: ''
+              clearable: true
+          -
+            handle: footer_class
+            field:
+              type: select
+              display: Footer style
+              options:
+                '': Default
+                footer-pase-2: Footer two
+                footer-pase-3: Footer three
+              default: ''
+              clearable: true
+          -
+            import: page_builder
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo

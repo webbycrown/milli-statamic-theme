@@ -1,0 +1,30 @@
+{{# Home Hero Two — milli-2.html hero (no background image, has subtitle) #}}
+<section class="hero-section hero-section-pase-2 hero-section-two-mobile">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="wrapper">
+					<div class="hero-content hero-content-pase-2">
+						{{ if heading }}<h2>{{ heading }}</h2>{{ /if }}
+						<div class="auto-column">
+							{{ if text }}<p>{{ text }}</p>{{ /if }}
+							{{ if button_label }}
+							<div class="hero-button">
+								<a href="{{ button_url }}" class="btn btn-primary hover-text-white">
+									<span>{{ button_label }}</span>
+								</a>
+							</div>
+							{{ /if }}
+						</div>
+						{{ if overlay_text }}<h3>{{ overlay_text }}</h3>{{ /if }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{ if circle_text }}
+	<div class="hero-circle-text hero-circle-text-two">
+		<h2 id="circle-text">{{ circle_text }} </h2>
+	</div>
+	{{ /if }}
+</section>

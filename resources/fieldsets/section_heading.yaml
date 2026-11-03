@@ -1,0 +1,12 @@
+title: Section heading
+fields:
+  -
+    handle: kicker
+    field:
+      type: text
+      display: Kicker
+  -
+    handle: heading
+    field:
+      type: text
+      display: Title

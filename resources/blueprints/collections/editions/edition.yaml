@@ -1,0 +1,27 @@
+title: Edition
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              display: Title
+          -
+            handle: image
+            field:
+              type: assets
+              display: Image
+              container: assets
+              max_files: 1
+          -
+            handle: image_two
+            field:
+              type: assets
+              display: Image two
+              container: assets
+              max_files: 1

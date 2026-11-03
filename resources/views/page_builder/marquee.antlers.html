@@ -1,0 +1,32 @@
+{{# Marquee / scrolling text (milli-3.html) #}}
+<section class="culture-section culture-section-pase-3">
+	<div class="container">
+		<div class="culture-title marquee-title culture-swiper">
+			<div class="marquee-title-content swiper-wrapper">
+				{{ if marquee_text }}
+				<div class="marquee-title-item"><h2>{{ marquee_text }}</h2></div>
+				<div class="marquee-title-item"><h2>{{ marquee_text }}</h2></div>
+				<div class="marquee-title-item"><h2>{{ marquee_text }}</h2></div>
+				<div class="marquee-title-item"><h2>{{ marquee_text }}</h2></div>
+				{{ /if }}
+			</div>
+		</div>
+		{{ if show_culture_swiper }}
+		<div class="swiper culture-swiper culture-swiper-3">
+			<div class="swiper-wrapper">
+				{{ collection:culture limit="8" }}
+				<div class="swiper-slide">
+					<div class="culture-items" data-aos="fade-up" data-aos-duration="1000">
+						{{ if image }}
+						<a href="{{ url }}" class="image">
+							<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ title }}">
+						</a>
+						{{ /if }}
+					</div>
+				</div>
+				{{ /collection:culture }}
+			</div>
+		</div>
+		{{ /if }}
+	</div>
+</section>

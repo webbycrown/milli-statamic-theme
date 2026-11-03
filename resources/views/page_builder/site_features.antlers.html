@@ -1,0 +1,41 @@
+{{# Site features row (all-layout site-feature-page) #}}
+<section class="hiriging-page site-feature-page">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="career-explore-title">
+					{{ if heading }}<h2 class="title-rg" data-aos="fade-up" data-aos-duration="1000">{{ heading }}</h2>{{ /if }}
+				</div>
+				{{ if features }}
+				<div class="hiring-career-plan">
+					{{ features }}
+					{{ unless first }}
+					<div class="hiring-career-item" data-aos="zoom-out" data-aos-duration="1000" aria-hidden="true">
+						<div class="hiring-item-erow-wrap">
+							<svg width="98" height="11" viewBox="0 0 98 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect x="0.769531" y="4.7843" width="80" height="1.5" fill="#576F72" />
+								<path d="M76.5645 10.6521C81.2398 6.98393 78.5125 2.40754 76.5645 0.577859L97.0038 5.67965L76.5645 10.6521Z" fill="#576F72" />
+							</svg>
+						</div>
+					</div>
+					{{ /unless }}
+					<div class="hiring-career-item" data-aos="zoom-in" data-aos-duration="1000">
+						<div class="hiring-item-wrap">
+							<svg width="202" height="219" viewBox="0 0 202 219" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+								<path d="M69.777 19.4749C83.2086 -5.24992 118.791 -5.24992 132.223 19.4749C138.59 31.1959 151.04 38.3505 164.372 37.9193L165.564 37.8807C193.346 36.982 210.818 67.5258 195.96 91.0185C188.809 102.326 188.809 116.742 195.96 128.05C210.818 151.543 193.346 182.086 165.564 181.188L164.372 181.149C151.04 180.718 138.59 187.873 132.223 199.594C118.791 224.318 83.2086 224.318 69.777 199.594C63.4096 187.873 50.9595 180.718 37.6276 181.149L36.4361 181.188C8.65378 182.086 -8.81812 151.543 6.03977 128.05C13.1915 116.742 13.1915 102.326 6.03977 91.0185C-8.81812 67.5258 8.65377 36.982 36.4361 37.8807L37.6276 37.9193C50.9595 38.3505 63.4096 31.1959 69.777 19.4749Z" fill="#576F72" />
+								{{ if icon }}
+								<image href="{{ partial:partials/media-url :file="icon" }}" height="60" width="60" x="37%" y="35%" />
+								{{ /if }}
+							</svg>
+							<div class="hiring-text-wrap">
+								{{ if title }}<h4>{{ title }}</h4>{{ /if }}
+							</div>
+						</div>
+					</div>
+					{{ /features }}
+				</div>
+				{{ /if }}
+			</div>
+		</div>
+	</div>
+</section>

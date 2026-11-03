@@ -1,0 +1,30 @@
+{{# Simple published pages link list #}}
+<section class="site-pages-index">
+	<div class="container">
+		<div class="site-pages-index__wrap">
+			{{ if heading }}
+			<h2 class="title-rg" data-aos="fade-up" data-aos-duration="1000">{{ heading }}</h2>
+			{{ else }}
+			<h2 class="title-rg" data-aos="fade-up" data-aos-duration="1000">Pages</h2>
+			{{ /if }}
+			<ul class="site-pages-index__list">
+				{{ collection:pages sort="title" }}
+				{{ unless slug == "all-pages" }}
+				<li data-aos="fade-up" data-aos-duration="800">
+					<a href="{{ url }}">
+						<span>{{ title }}</span>
+						<span class="site-pages-index__go">View</span>
+					</a>
+				</li>
+				{{ /unless }}
+				{{ /collection:pages }}
+				<li data-aos="fade-up" data-aos-duration="800">
+					<a href="/search">
+						<span>Search</span>
+						<span class="site-pages-index__go">View</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>

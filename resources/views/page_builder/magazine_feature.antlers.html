@@ -1,0 +1,27 @@
+{{# Magazine feature — large image + text row (milli-3.html) #}}
+<section class="megazin-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="megazin-wrapper">
+					{{ if image }}
+					<div class="megazin-img" data-aos="zoom-in" data-aos-duration="1000">
+						<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ heading }}">
+					</div>
+					{{ /if }}
+					<div class="megazin-content">
+						{{ if heading }}<h3 data-aos="fade-left" data-aos-duration="1000">{{ heading }}</h3>{{ /if }}
+						{{ if text }}<p data-aos="fade-left" data-aos-duration="1000">{{ text }}</p>{{ /if }}
+						{{ if button_label }}
+						<div class="hero-button" data-aos="fade-right" data-aos-duration="1500">
+							<a href="{{ button_url }}" class="btn btn-primary">
+								<span>{{ button_label }}</span>
+							</a>
+						</div>
+						{{ /if }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

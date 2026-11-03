@@ -1,0 +1,156 @@
+title: Setting
+tabs:
+  general:
+    display: General
+    sections:
+      -
+        fields:
+          -
+            handle: site_name
+            field:
+              type: text
+              display: Site name
+              default: Milli
+          -
+            handle: industry
+            field:
+              type: select
+              display: Catalogue
+              options:
+                original: Original
+                fashion: Fashion
+                menswear: Menswear
+                womenswear: Womenswear
+                kids: Kids
+                streetwear: Streetwear
+                jewellery: Jewellery
+                beauty: Beauty
+                accessories: Accessories
+                homeware: Homeware
+              instructions: 'Display only. Run php please milli:setup {slug} to apply a catalogue pack.'
+          -
+            handle: industry_label
+            field:
+              type: text
+              display: Catalogue label
+          -
+            handle: theme_color
+            field:
+              type: color
+              display: Brand colour
+              instructions: 'Primary brand hex for this catalogue.'
+          -
+            handle: theme_color_soft
+            field:
+              type: color
+              display: Brand soft colour
+          -
+            handle: theme_color_dark
+            field:
+              type: color
+              display: Brand dark colour
+          -
+            handle: logo
+            field:
+              type: assets
+              display: Logo
+              container: assets
+              max_files: 1
+          -
+            handle: logo_white
+            field:
+              type: assets
+              display: Logo (white)
+              container: assets
+              max_files: 1
+          -
+            handle: phone
+            field:
+              type: text
+              display: Phone
+          -
+            handle: email
+            field:
+              type: text
+              display: Email
+          -
+            handle: address
+            field:
+              type: textarea
+              display: Address
+          -
+            handle: social_links
+            field:
+              type: grid
+              display: Social links
+              fields:
+                -
+                  handle: label
+                  field:
+                    type: text
+                    display: Label
+                -
+                  handle: url
+                  field:
+                    type: text
+                    display: URL
+                -
+                  handle: icon
+                  field:
+                    type: assets
+                    display: Icon
+                    container: assets
+                    max_files: 1
+          -
+            handle: map_embed
+            field:
+              type: textarea
+              display: Map embed code
+  forms:
+    display: Forms
+    sections:
+      -
+        fields:
+          -
+            handle: newsletter_placeholder
+            field:
+              type: text
+              display: Newsletter placeholder
+              default: 'Enter your email ...'
+          -
+            handle: newsletter_button
+            field:
+              type: text
+              display: Newsletter button text
+              default: Sign Up
+          -
+            handle: newsletter_success
+            field:
+              type: text
+              display: Newsletter success message
+              default: Thank you for subscribing!
+          -
+            handle: contact_button
+            field:
+              type: text
+              display: Contact button text
+              default: Send
+          -
+            handle: contact_success
+            field:
+              type: text
+              display: Contact success message
+              default: 'Thank you! We will be in touch.'
+          -
+            handle: career_success
+            field:
+              type: text
+              display: Career success message
+              default: Thank you for your application!
+  seo:
+    display: SEO
+    sections:
+      -
+        fields:
+          -
+            import: seo

@@ -1,0 +1,53 @@
+{{# Editions grid — static grid with heading (milli-2.html) #}}
+<section class="edition-section edition-section-pase-2">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="edition-wrapper">
+					<div class="edition-wrapper-top">
+						{{ collection:editions limit="1" }}
+						<div class="edition-item edition-item-1">
+							{{ if image }}
+							<div class="edition-img edition-img-1" data-aos="zoom-in" data-aos-duration="1000">
+								<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ title }}">
+							</div>
+							{{ /if }}
+						</div>
+						{{ /collection:editions }}
+						<div class="edition-title edition-item edition-item-2">
+							{{ if heading }}<h2 class="title-rg mb-0" data-aos="fade-up" data-aos-duration="1000">{{ heading }}</h2>{{ /if }}
+							{{ if text }}<p>{{ text }}</p>{{ /if }}
+							{{ if button_label }}
+							<div class="hero-button" data-aos="fade-right" data-aos-duration="1500">
+								<a href="{{ button_url }}" class="btn btn-primary hover-text-white">
+									<span>{{ button_label }}</span>
+								</a>
+							</div>
+							{{ /if }}
+						</div>
+						{{ collection:editions offset="1" limit="1" }}
+						<div class="edition-item edition-item-3">
+							{{ if image }}
+							<div class="edition-img edition-img-2" data-aos="zoom-in" data-aos-duration="1000">
+								<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ title }}">
+							</div>
+							{{ /if }}
+						</div>
+						{{ /collection:editions }}
+					</div>
+					<div class="edition-wrapper-bottom">
+						{{ collection:editions offset="2" limit="2" }}
+						<div class="edition-item edition-item-{{ count | add:3 }}">
+							{{ if image }}
+							<div class="edition-img edition-img-{{ count | add:2 }}" data-aos="zoom-in" data-aos-duration="1000">
+								<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ title }}">
+							</div>
+							{{ /if }}
+						</div>
+						{{ /collection:editions }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

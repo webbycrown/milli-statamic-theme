@@ -1,0 +1,16 @@
+{{# Newsletter section #}}
+<section class="news-letter">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="wrapper">
+					<div class="letter-title">
+						{{ if heading }}<h2 class="title-rg" data-aos="fade-up" data-aos-duration="1000">{{ heading }}</h2>{{ /if }}
+						{{ if text }}<p data-aos="fade-up" data-aos-duration="1000">{{ text }}</p>{{ /if }}
+					</div>
+					{{ partial:partials/newsletter-form }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,41 @@
+{{# News slider — star-shaped image cards in a Swiper (index.html) #}}
+<section class="news-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="news-title">
+					{{ if heading }}<h2 class="title-rg" data-aos="fade-up" data-aos-duration="1000">{{ heading }}</h2>{{ /if }}
+				</div>
+				<div class="news-wrapper">
+					<div class="swiper news-swiper">
+						<div class="swiper-wrapper">
+							{{ collection:news limit="6" }}
+							<div class="swiper-slide">
+								<div class="news-item">
+									<div class="news-img">
+										{{ if star_image }}
+										{{ partial:partials/star-image :file="star_image" :alt="title" :id="id" }}
+										{{ /if }}
+									</div>
+									<div class="news-content">
+										<p class="date-meta">{{ date format="d M, Y" }}</p>
+										<h4><a href="{{ url }}">{{ title }}</a></h4>
+									</div>
+								</div>
+							</div>
+							{{ /collection:news }}
+						</div>
+						<div class="news-swiper-geers">
+							<div class="swiper-button-prev">
+								<img src="/assets/image/news-swiper-arrow.svg" alt="" aria-hidden="true">
+							</div>
+							<div class="swiper-button-next">
+								<img src="/assets/image/news-swiper-arrow.svg" alt="" aria-hidden="true">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

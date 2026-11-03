@@ -1,0 +1,9 @@
+title: Contact
+honeypot: winnie
+email:
+  -
+    to: '{{ setting:email }}'
+    from: '{{ email }}'
+    reply_to: '{{ email }}'
+    subject: 'New contact message from {{ name }}'
+    html: emails/contact

@@ -1,0 +1,35 @@
+{{# Culture blog listing — image + text cards (culture-blog-listing.html) #}}
+<section class="blog-grid-section">
+	<div class="container">
+		<div class="culture-title">
+			{{ if heading }}<h2 class="title-rg" data-aos="fade-up" data-aos-duration="1000">{{ heading }}</h2>{{ /if }}
+		</div>
+		{{ collection:culture paginate="6" as="posts" }}
+		<div class="blog-grid-list-wrap">
+			{{ posts }}
+			<div class="blog-grid-list-item">
+				{{ if image }}
+				<div class="blog-img" data-aos="fade-right" data-aos-duration="1500">
+					<div class="blog-img-item">
+						<img src="{{ partial:partials/media-url :file="image" }}" alt="{{ title }}">
+					</div>
+				</div>
+				{{ /if }}
+				<div class="blog-contant">
+					<div class="blog-contant-item">
+						<p data-aos="fade-right" data-aos-duration="1500">{{ date format="d M, Y" }} - No Comments</p>
+						<h3 data-aos="fade-left" data-aos-duration="1000">{{ title }}</h3>
+						<div class="hero-button" data-aos="fade-right" data-aos-duration="1500">
+							<a href="{{ url }}" class="btn btn-primary">
+								<span>Explore</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{ /posts }}
+		</div>
+		{{ partial:partials/pagination }}
+		{{ /collection:culture }}
+	</div>
+</section>
