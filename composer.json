@@ -4,7 +4,7 @@
     "description": "Culture magazine starter kit with news, editions, culture stories, workshops, and careers.",
     "license": "proprietary",
     "require": {
-        "statamic/cms": "^5.0"
+        "statamic/cms": "^5.0 || ^6.0"
     },
     "extra": {
         "statamic": {
